@@ -19,14 +19,9 @@ owner:
   github:         https://www.github.com/ramaseshan
   stackexchange:  
   linkedin:       https://www.linkedin.com/profile/view?id=204010653
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
 
 # Background image to be tiled on all pages
-background: iwitewall_3.png
+background: triangular.png 
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
