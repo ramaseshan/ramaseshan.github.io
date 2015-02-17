@@ -1,6 +1,7 @@
 ---
 layout: post
-title: About Ramaseshan
+title: About Technology
+categories: technology
 ---
 
 
