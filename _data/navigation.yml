@@ -1,7 +1,10 @@
 # Menu navigation links
 
-- title: Theme Setup
-  url: /theme-setup/
+- title: Technology 
+  url: /technology/
 
-- title: External Link
-  url: http://mademistakes.com
+- title: Life and Thoughts
+  url: /life/
+
+- title: Sanskrit
+  url: /sanskrit/

@@ -1,34 +1,23 @@
 ---
 layout: page
-title: About the Jekyll Theme
+title: About Ramaseshan 
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: false
-modified: 2014-12-24
+modified: 2015-02-17
 ---
 
-They say three times the charm, so here is another free responsive Jekyll blog theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. 
+I live in Bangalore, and like most of the people there I am also a Software Engineer. I love talking and playing around with technology, espically linux and python, and like to automate most of the things. 
 
-If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
+Also a member of PuduvaiGLUG, a Free Software lover, likes teaching, and love sanskrit for its vast beauty as a language.
 
-## What HPSTR brings to the table:
+## Life works I currently do:
 
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Modern and minimal design.
-* Sweet animated menu.
-* Background image support.
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Built-in support for Sass courtesy of Jekyll 2.x.
-* Optional [Disqus](http://disqus.com) comments.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy.
+    * Promote Free Software where eva possible.
+    * Teach Sanskrit. (Online too... Intrested , Drop me a line @ ram.seshan.cs@gmail.com)
+    * This Website
 
-<div markdown="0"><a href="{{ site.url }}/theme-setup/" class="btn btn-info">Theme Setup</a> <a href="https://github.com/mmistakes/hpstr-jekyll-theme" class="btn btn-success">Download HPSTR</a></div>
+<div markdown="0"><a href="{{ site.url }}" class="btn btn-info">Go Home</a> <a href="mailto:ram.seshan.cs@gmail.com" class="btn btn-success">Contact Me</a></div>
 
-[^1]: Example: *domain.com/category-name/post-title*

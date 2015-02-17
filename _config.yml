@@ -14,11 +14,11 @@ owner:
   bio:            'I am a software engineer working in Bangalore. I love Computers, Programming, Sanskrit, Teaching. A Free Society lover.' 
   email:          ram.seshan.cs@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
+  twitter:        https://twitter.com/seshan228
+  facebook:       https://www.facebook.com/ramaseshanmukund 
+  github:         https://www.github.com/ramaseshan
   stackexchange:  
-  linkedin:       
+  linkedin:       https://www.linkedin.com/profile/view?id=204010653
   instagram:      
   flickr:         
   tumblr:         
@@ -26,7 +26,7 @@ owner:
   google_plus:    +yourid
 
 # Background image to be tiled on all pages
-background: 
+background: iwitewall_3.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
