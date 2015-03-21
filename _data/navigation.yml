@@ -1,10 +1,13 @@
 # Menu navigation links
 
+- title: Free Society
+  url: /tags/#free-society
+
 - title: Technology 
-  url: /technology/
+  url: /tags/#technology
 
 - title: Life and Thoughts
-  url: /life/
+  url: /tags/#life
 
 - title: Sanskrit
-  url: /sanskrit/
+  url: /tags/#sanskrit

@@ -9,15 +9,10 @@ comments: false
 modified: 2015-02-17
 ---
 
-I live in Bangalore, and like most of the people there I am also a Software Engineer. I love talking and playing around with technology, espically linux and python, and like to automate most of the things. 
+A software guy from Bangalore, India, woking on GNU/Linux, Python and Shell. I am also a Free Software, Free Internet and a Free Knowledge Enthusiast. 
+<br />Apart from the Digital world, I love exploring on Renewable Energy and a Nature lover. Sanskrit as a language has also always been my passion. 
+<br /> Loves teaching on a condition that , Learn Free and Teach back Free.
 
-Also a member of PuduvaiGLUG, a Free Software lover, likes teaching, and love sanskrit for its vast beauty as a language.
-
-## Life works I currently do:
-
-    * Promote Free Software where eva possible.
-    * Teach Sanskrit. (Online too... Intrested , Drop me a line @ ram.seshan.cs@gmail.com)
-    * This Website
-
-<div markdown="0"><a href="{{ site.url }}" class="btn btn-info">Go Home</a> <a href="mailto:ram.seshan.cs@gmail.com" class="btn btn-success">Contact Me</a></div>
+<div markdown="0"><a href="{{ site.url }}" class="btn btn-info">Go Home</a> 
+<a href="mailto:ram.seshan.cs@gmail.com" class="btn btn-success">Contact Me</a></div>
 
