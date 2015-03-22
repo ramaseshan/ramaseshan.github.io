@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Free Internet Awerness at Fractalio Data and Data Lifecycle Company in Bangalore"
+title: "Free Internet Awareness at Fractalio Data and Data Lifecycle Company in Bangalore"
 modified:
 categories: free-society
-description: An step of the awerness program initiative by Fractalio Data
+description: An step of the awareness program initiative by Fractalio Data
 tags: [free-society, free-internet, ]
 image:
-  feature:
-  credit:
-  creditlink:
+  feature: top.png
+  credit: Free Software
+  creditlink: http://gnu.org
 comments: false
 share:
 date: 2015-03-22T05:29:11-04:00
