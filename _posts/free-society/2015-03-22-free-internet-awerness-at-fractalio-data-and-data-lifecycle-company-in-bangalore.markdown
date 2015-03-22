@@ -9,7 +9,7 @@ image:
   feature: top.png
   credit: Free Software
   creditlink: http://gnu.org
-comments: false
+comments: true
 share:
 date: 2015-03-22T05:29:11-04:00
 ---
