@@ -1,6 +1,6 @@
 title:            Scribbler
 description:      "Ramaseshan's Blog"
-#disqus_shortname: hpstrtheme
+disqus_shortname: ramaseshan
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -11,7 +11,7 @@ url:
 owner:
   name:           Ramaseshan  
   avatar:         avatar.jpg
-  bio:            'I am a software engineer working in Bangalore. I love Computers, Programming, Sanskrit, Teaching. A Free Society lover.' 
+  bio:            '#free-software-enthusiast, #belives-in-free-knowledge, #loves-teaching, #sanskrit-as-a-language, #renewable-energy-explorer'
   email:          ram.seshan.cs@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        https://twitter.com/seshan228
