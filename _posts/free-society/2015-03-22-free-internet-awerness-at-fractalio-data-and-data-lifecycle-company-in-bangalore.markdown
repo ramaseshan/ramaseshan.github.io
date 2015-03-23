@@ -38,10 +38,12 @@ Psst ! To view the notes, download and open the presentation in Libre Office, an
 ![Alt image](/images/free-internet-images/8.jpg "Free-Internet Talk Images")
 
 ## Next Steps:
-	* We have decided to take short talks to small group of people during breaks,
-	in helping them get started with the tools, like Diaspora etc. 
+	* We have decided to short talks in more decentralised small groups,
+	in helping them get started with better internet tools, like Diaspora, Cryptocat etc. 
 	* We have decided to create small office level groups on Telegram, 
 	so people would not complain , none of my friends are on telegram, so why should I use it.
+
+**A special thanks for Free Software Foundation Tamilnadu(FSFTN http://fsftn.org/), for the stickers and swags that we used for distributing to the participants.**
 
 Note : Feel free to add more notes to the presentation and share it back, so that we can use the knowledge and information that we have missed and you have, to share amongst ourselves. 
 
