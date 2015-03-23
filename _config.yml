@@ -1,4 +1,4 @@
-title:            Ramaseshan
+title:            Ramaseshan's Blog
 description:      "Ramaseshan's Blog"
 disqus_shortname: ramaseshan
 reading_time:     true
@@ -22,7 +22,7 @@ owner:
   diaspora:       https://diasp.org/i/438bfbf3ecbb
 
 # Background image to be tiled on all pages
-background: triangular.png 
+background: triangular.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   

@@ -13,6 +13,6 @@ A software guy from Bangalore, India, woking on GNU/Linux, Python and Shell. I a
 <br />Apart from the Digital world, I love exploring on Renewable Energy and a Nature lover. Sanskrit as a language has also always been my passion. 
 <br /> Loves teaching on a condition that , Learn Free and Teach back Free.
 
-<div markdown="0"><a href="{{ site.url }}" class="btn btn-info">Go Home</a> 
+<div markdown="0"><a href="/" class="btn btn-info">Go Home</a> 
 <a href="mailto:ram.seshan.cs@gmail.com" class="btn btn-success">Contact Me</a></div>
 

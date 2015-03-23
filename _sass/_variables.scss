@@ -1,15 +1,16 @@
 // Typography
 // --------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Redressed);
 
-$base-font: 'Lato', Calibri, Arial, sans-serif;
-$heading-font: $base-font;
-$caption-font: $base-font;
+$base-font: 'Quicksand', sans-serif, Arial, sans-serif;
+$heading-font: 'Redressed', cursive;
+$caption-font: 'Redressed', cursive;
 $code-font: monospace;
 $alt-font: serif;
 
 $doc-font-size: 16;
 $doc-line-height: 26;
-
 
 // set-up the body font-size / line-height
 body {
@@ -33,7 +34,7 @@ $primary			       : #222;
 $success			       : #5cb85c;
 $warning			       : #dd8338;
 $danger				       : #C64537;
-$info				         : #308cbc;
+$info				       : #308cbc;
 
 
 // Screen Size
