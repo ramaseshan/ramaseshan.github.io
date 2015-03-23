@@ -39,7 +39,7 @@ Psst ! To view the notes, download and open the presentation in Libre Office, an
 
 ## Next Steps:
 	* We have decided to short talks in more decentralised small groups,
-	in helping them get started with better internet tools, like Diaspora, Cryptocat etc. 
+	in helping them get started with better internet tools, like DuckDuckGo, Diaspora, Cryptocat etc. 
 	* We have decided to create small office level groups on Telegram, 
 	so people would not complain , none of my friends are on telegram, so why should I use it.
 
