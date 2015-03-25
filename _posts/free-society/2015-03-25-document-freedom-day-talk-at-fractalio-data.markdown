@@ -55,7 +55,7 @@ $.ajax({
         //Lsit all png file names in the page
         $(data).find("a:contains(" + fileextension + ")").each(function () {
             var filename = this.href.replace(window.location, "").replace("http:///", "");
-            $("#dfd_images").append($("<img src=" + dir + filename + "></img>"));
+            $("#dfd_images").append($("<img src=/images/dfd-images/"+ filename + "></img>"));
         });
     }
 });
