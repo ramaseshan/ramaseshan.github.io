@@ -9,7 +9,7 @@ image:
   feature: true
   credit: Free Software
   creditlink: http://gnu.org
-comments: true
+comments: false
 share:
 date: 2015-03-25T02:11:33-04:00
 ---
