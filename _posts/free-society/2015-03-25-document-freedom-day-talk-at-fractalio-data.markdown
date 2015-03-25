@@ -40,9 +40,10 @@ This talk basically focussed on the following topics.
 </div>
 
 
-**We would like to thank Sangeetha for organising the participants, and the DatalifeCycle Company for the space. Greater thanks to Ms. Prathiba for allowing us to celebrate DFD along with her birthday. Thanks to all the participants for attending.**
+**We would like to thank Ms. Sangeetha for organising the event and the participants, and the DatalifeCycle Company for the space. Greater thanks to Ms. Prathiba for allowing us to celebrate DFD along with her birthday. Thanks to all the participants for attending.**
 
 **A special thanks for Free Software Foundation Tamilnadu(FSFTN http://fsftn.org/) and FSF (Free Software Foundation), for the stickers and swags that we used for distributing to the participants. We would also like to thank all the contributers in the Free and Open world, without whom this whole talk would not have been possible.**
+
 
 <script>
 var dir = "/images/dfd-images/";
@@ -53,7 +54,7 @@ $.ajax({
     success: function (data) {
         //Lsit all png file names in the page
         $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+            var filename = this.href.replace(window.location, "").replace("http:///", "");
             $("#dfd_images").append($("<img src=" + dir + filename + "></img>"));
         });
     }
