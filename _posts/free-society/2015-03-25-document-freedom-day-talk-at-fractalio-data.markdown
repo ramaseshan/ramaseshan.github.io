@@ -37,6 +37,19 @@ This talk basically focussed on the following topics.
 # Image gallery
 
 <div id="dfd_images">
+	<img src="/images/dfd-images/2015-03-24%2016.18.29.jpg">
+	<img src="/images/dfd-images/2015-03-24%2016.19.09.jpg">
+	<img src="/images/dfd-images/2015-03-24%2016.20.25.jpg">
+	<img src="/images/dfd-images/2015-03-24%2016.20.38.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.15.47.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.16.02.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.21.59.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.22.29.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.22.40.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.23.54.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.25.17.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.31.51.jpg">
+	<img src="/images/dfd-images/2015-03-25%2011.32.01.jpg">
 </div>
 
 
@@ -44,7 +57,7 @@ This talk basically focussed on the following topics.
 
 **A special thanks for Free Software Foundation Tamilnadu(FSFTN http://fsftn.org/) and FSF (Free Software Foundation), for the stickers and swags that we used for distributing to the participants. We would also like to thank all the contributers in the Free and Open world, without whom this whole talk would not have been possible.**
 
-
+<!--
 <script>
 var dir = "/images/dfd-images/";
 var fileextension = ".jpg";
@@ -60,3 +73,4 @@ $.ajax({
     }
 });
 </script>
+-->
