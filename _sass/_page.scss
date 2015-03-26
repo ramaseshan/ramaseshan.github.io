@@ -2,7 +2,19 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background-color: $body-color;
+    background:
+        -moz-radial-gradient(white 16%, transparent 16%),
+        -moz-radial-gradient(white 16%, transparent 16%),
+        $bg-color;
+    background:
+        -webkit-radial-gradient(white 16%, transparent 16%),
+        -webkit-radial-gradient(white 16%, transparent 16%),
+        $bg-color;
+    background-position: 0 0, 80px 80px;
+    
+    -webkit-background-size:160px 160px;
+    -moz-background-size:160px 160px;
+    background-size:160px 160px;
 }
 
 // Main
@@ -258,6 +270,7 @@ header .entry-meta {
 .pagination {
 	margin: 20px 10px;
 	text-align: center;
+	font-weight: bolder;
 	ul {
 		display: inline;
 		margin-left: 10px;
@@ -269,6 +282,10 @@ header .entry-meta {
 	}
 	.current-page {
 		font-weight: 700;
+	}
+	.page-click {
+		font-weight: 700;
+		color: $warning;
 	}
 }
 
@@ -403,12 +420,11 @@ header .entry-meta {
 // Footer
 // --------------------------------------------------
 .footer-wrapper {
-	@include clearfix;
 	margin: 2em auto;
 	text-align: center;
-	color: lighten($text-color,20);
+	color: $white;
 	a {
-		color: lighten($text-color,20);
+		color: lighten($warning,20);
 	}
 }
 
@@ -432,34 +448,4 @@ header .entry-meta {
 .upgrade {
 	padding: 10px;
 	text-align: center;
-}
-
-// Google Search
-// --------------------------------------------------
-#goog-fixurl {
-	ul {
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-		li {
-			list-style-type: none;
-		}
-	}
-}
-#goog-wm-qt {
-	width: auto;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	padding: 8px 20px;
-	display: inline-block;
-	@include font-rem(14);
-	background-color: $white;
-	color: $text-color;
-	border-width: 2px !important;
-	border-style: solid !important;
-	border-color: lighten($primary,50);
-	@include rounded(3px);
-}
-#goog-wm-sb {
-	@extend .btn;
 }
