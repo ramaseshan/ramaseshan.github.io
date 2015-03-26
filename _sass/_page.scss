@@ -32,6 +32,7 @@ body {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
+	background-url: url ('/images/post-top.jpg')
 }
 .header-title {
 	text-align: center;
@@ -40,7 +41,7 @@ body {
 		margin: 10px 20px;
 		font-weight: 700;
 		@include font-rem(32);
-		color: lighten($base-color,20);
+		color: $header-color;
 		@media #{$medium} {
 			@include font-rem(48);
 		}
@@ -52,7 +53,7 @@ body {
 		margin: 0;
 		@include font-rem(18);
 		text-transform: uppercase;
-		color: lighten($base-color,40);
+		color: $header-color;
 		@media #{$medium} {
 			@include font-rem(24);
 		}
