@@ -45,14 +45,10 @@ comments: false
     {% else %}
       <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn btn-warning"><strong>Previous</strong></a>
     {% endif %}
-  {% else %}
-    Previous
   {% endif %}
   <ul class="inline-list">
     <li>
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
+      {% if paginator.page != 1 %}
         <a href="{{ site.url }}" class="page-click">1</a>
       {% endif %}
     </li>
@@ -68,7 +64,5 @@ comments: false
   </ul>
   {% if paginator.next_page %}
     <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn btn-warning">Next</a>
-  {% else %}
-    Next
   {% endif %}
 </div><!-- /.pagination -->
