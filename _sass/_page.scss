@@ -173,7 +173,7 @@ body {
 .entry-meta {
 	@include font-rem(12);
 	text-transform: uppercase;
-	color: lighten($base-color,60);
+	color: $black;
 	a {
 		color: lighten($base-color,60);
 	}
