@@ -14,11 +14,11 @@ owner:
   bio:            '#free-software-enthusiast, #belives-in-free-knowledge, #loves-teaching, #sanskrit-as-a-language, #renewable-energy-explorer'
   email:          ram.seshan.cs@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        https://twitter.com/seshan228
-  facebook:       https://www.facebook.com/ramaseshanmukund 
-  github:         https://www.github.com/ramaseshan
+  twitter:        seshan228
+  facebook:       ramaseshanmukund 
+  github:         ramaseshan
   stackexchange:  
-  linkedin:       https://www.linkedin.com/profile/view?id=204010653
+  linkedin:       profile/view?id=204010653
   diaspora:       https://diasp.org/i/438bfbf3ecbb
 
 # Background image to be tiled on all pages
@@ -39,7 +39,7 @@ sass:
 permalink:   /:categories/:title/
 
 # Amount of post to show on home page
-paginate: 5
+paginate: 10
 
 kramdown:
   auto_ids: true
