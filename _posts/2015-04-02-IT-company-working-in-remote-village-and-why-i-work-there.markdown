@@ -34,4 +34,8 @@ Its a beautiful place, fully sorrounded by hills, trees, cows, hens, peococks. I
 
 Poeple are mostly from agricultural,carpentary etc background here. Technology has influenced the people here only to the extent of a TV and basic mobile phones (hardly any smart phones). I havent heard of people having a computer here. Poeple mostly are dependent on daily wages.
 
-With these, we have started out to work from a remote village. We dont know what problem exists in front of us next, but we are ready to face it.
+Being in a place like this, and running an IT company is not as easy as running it in a Urban Center. I did not complete the whole stuff, but we are already working there, and we are having plans of making sure the people there are also thought. We havent started anything in that front yet, but we have plans, concrete ones. We will soon start out doing out one by one.
+
+If you have read the blog till this point, you are surely interested in what we are doing. It are an IT guy, loves GNU/Linux, and also interested in hacking a few out of IT like agriculture, improvising the state of agriculture, lets talk.
+
+Psst ! We are still hiring. If you are interested or got interesting ideas, drop me a mail : ramaseshan@fractalio.com or ram.seshan.cs@gmail.com
