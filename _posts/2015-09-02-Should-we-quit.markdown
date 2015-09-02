@@ -78,6 +78,10 @@ Quit when necessary, not when you cant. When you cant, postpond it.You can event
 But always remember :
 > “We all start in the same place: no money, no resources, no contacts, no experience. The difference is that some people — the winners — choose to start anyway.” James Clear
 
+If you are interested in contributing to charcha, please do write to us.
+<a href="mailto:hello@charcha.space">hello@charcha.space</a>
+You could follow charcha here : https://github.com/charcha
+
 
 
 
