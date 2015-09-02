@@ -10,7 +10,8 @@ share:
 date: 2015-09-02T00:04:26-04:00
 ---
 
-I had been working on a project called CHARCHA, for quite sometime now. The aim of this project is not to reinvent something that already exists, rather combine a few tools to make a workflow better.  Before building thus product , I have to confess that I have worked for 2 other companies and NY present is the 3rd startup I am working for. In all these cases, I have failed a lot of times , even thought of quitting a lot if time.  But I never quit, tough I took my time to finish things, I always finished things. I never gave up.
+I had been working on a project called [CHARCHA](http://charcha.space)
+, for quite sometime now. The aim of this project is not to reinvent something that already exists, rather combine a few tools to make a workflow better.  Before building thus product , I have to confess that I have worked for 2 other companies and NY present is the 3rd startup I am working for. In all these cases, I have failed a lot of times , even thought of quitting a lot if time.  But I never quit, tough I took my time to finish things, I always finished things. I never gave up.
 
 So great, why am I writing this article ??? A few days back one of the contributors of the project called me and asked "Should we stop working in the project". That question stuck to me hard. I was not able to answer it. I was quite and was (not) listening to him, and my mind went through a flash of incidents from my life. This article is a summary of those incidents that flashed my mind and my subsequent response to that person.
 
