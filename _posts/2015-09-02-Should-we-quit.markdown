@@ -16,10 +16,9 @@ So great, why am I writing this article ??? A few days back one of the contribut
 
 #### The following us going to involve a lot of boring stories of my past. Do BEWARE . . . !
 
-> Note :
-Having said that, once I’ve decided to write a blog post, I never ask myself the question, ‘does anyone care about this?’ I do ask myself questions like ‘Could I improve this?’, ‘Could this be better?’, and ‘Are there useful takeaways in this?’
+> Having said that, once I’ve decided to write a blog post, I never ask myself the question, ‘does anyone care about this?’ I do ask myself questions like ‘Could I improve this?’, ‘Could this be better?’, and ‘Are there useful takeaways in this?’
 
-I was born in a lower middle-class family, who state of next day's food was a question mark. Without the help of a few relatives and friends, I woulnd't have been an "ENGINEER" today. I always will remember this statement. This statement gives a powerful overview of what my past was, so that my future would be to change someone with the same present into my present future. Basically create a value in someone's life, not with money, but with RIGHT EDUCATION.
+I was born in a lower middle-class family, who state of next day's food was a question mark. Without the help of a few relatives and friends, My brother ans sister, literally had paid most part of my education. My college education was a loan. But without these struggles,I woulnd't have been an "ENGINEER" today. I always will remember this in my life. This gives a powerful overview of what my past was, so that my future would be to change someone with the same present into my present future. Basically create a value in someone's life, not with money, but with RIGHT EDUCATION.
 
 I had failed a lot of times in my life,never actually have seen success until my 8th std, I was not someone people would even like to know. But I had my first success in my 8th std (2005), when I was awarded the "Yuva Kala Bharathi Award", as the youngest sanskrit teacher, who has though sanskrit to more than 100 people. To me then, it didnt really sound so great, I didnt even realize what I was doing. I just loved teaching. It was my passion. My influence to teaching comes from various teachers in my school and some special classes.
 
