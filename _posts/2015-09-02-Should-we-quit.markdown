@@ -16,7 +16,7 @@ So great, why am I writing this article ??? A few days back one of the contribut
 
 #### The following us going to involve a lot of boring stories of my past. Do BEWARE . . . !
 
-Note :
+> Note :
 Having said that, once I’ve decided to write a blog post, I never ask myself the question, ‘does anyone care about this?’ I do ask myself questions like ‘Could I improve this?’, ‘Could this be better?’, and ‘Are there useful takeaways in this?’
 
 I was born in a lower middle-class family, who state of next day's food was a question mark. Without the help of a few relatives and friends, I woulnd't have been an "ENGINEER" today. I always will remember this statement. This statement gives a powerful overview of what my past was, so that my future would be to change someone with the same present into my present future. Basically create a value in someone's life, not with money, but with RIGHT EDUCATION.
@@ -34,7 +34,7 @@ I had to again cry for a college seat. We again couldn't afford a Management sea
 
 Until my final year in college, thanks to a few juniors (Selva ganesh, Mohit jain and Lalith kumar), I had a chance of revival. I had an national level project contest, which I decided to participate.
 
-"For a long time I’ve been cursed with an inflated sense of my own potential but nothing to show for it. Nobody else agrees with me that I’m capable of amazing things because they haven’t seen any proof. I don’t need any more proof than what’s in my head, but others do—and rightly so.So I need to prove. I need a proof for myself."
+> "For a long time I’ve been cursed with an inflated sense of my own potential but nothing to show for it. Nobody else agrees with me that I’m capable of amazing things because they haven’t seen any proof. I don’t need any more proof than what’s in my head, but others do—and rightly so.So I need to prove. I need a proof for myself."
 
 I decided to do it. After bunking a lot of classes, We finished this project, and we won the 3rd prize. It meant something for me.I had revived. People again recognized me. People talked to me. But very soon, it went in vain. Again disheartned. I learnt this world needs success. A success which they see as success, to exist in a person for them to talk to, to value them, to even include them in their life. 
 
@@ -51,11 +51,11 @@ But that thought, really didn't have an impact in my life. I just joined another
 
 So with all going good, life was probably not happy with me being happy. It gave the twist again. This time, the startup I worked for, shutdown. Rejection (My best friend) was back. This time, I had just worked for an year. I was not very bad, but I was a decent programmer. I really didnt want to join an MNC. I realized in one year, I had grown to a decent level. I needed this growth. But this time with no job, I was not applying to any job. I rather decided to start my own start-up. I had no experience. I had no expections either. I just needed something, that will make me belive me in myself.
 
-"I have had a 1000 failures before, what is 1 more going to make a difference ?". This was my thought.
+> "I have had a 1000 failures before, what is 1 more going to make a difference ?". This was my thought.
 
 I had an idea, I started working on the prototype along with my roommate and ex-officemate (Harish), to get the prototype successfully completed.
 
-"To keep creating without falling into existential disarray I’ve learned to be brave and start from a base assumption that if I care about my work at least one other person probably does too, so it’s worth finishing."
+> "To keep creating without falling into existential disarray I’ve learned to be brave and start from a base assumption that if I care about my work at least one other person probably does too, so it’s worth finishing."
 
 The prototype was live. We were happy. We now took the prototype out for validation. People were exited to look at a product like ours. But then the hard question came, what is our revenue model. The obvious answer that came was "Data and pattern collection and selling them". Everybody accepted it. I started reading more on that. I took the responsibility of the buisness side of it. I was pretty impressed with "Data as the revenue model". It works. That is when, the Free software movement came into play in my life, to create another failure. I read about survillence and decided not to have "Data collection" as the revenue model. I just felt it was against the ethics of a common man. We cant sell a common man's data to companies all over the world. My team-mates were not happy. We got an investor call. He was also impressed with the idea, and asked the same old question. "What is the revenue model ?". I didnt have an answer. I replied "I am working on it." He was ok, but then he put a condition, atleast two people should sit full time. I came back happy, and told my other two people. But then for the life's twist again, both of them told a "NO", for full time, and the investor was not happy with one person, coding and handling the buisness.
 Things dropped off again. It went from an interesting idea to a nothing. All that happiness was just to go in vain.
@@ -68,7 +68,7 @@ Charcha is one such expriment, which came up to solve the problem of community d
 
 With all these thoughts, that flased my mind, I told, We are not stopping working on Charcha. I told, there are real world use-cases, when this tool cal be used. And I am not quitting it. Its the choice of other people, to choose to quit.
 
-"If someone asks me whether anyone cares about what I’m working on, I can usually tell them honestly that I’d read this if someone else wrote it, or I’d use this app if someone else built it.I’m always working in-line with my values."
+> "If someone asks me whether anyone cares about what I’m working on, I can usually tell them honestly that I’d read this if someone else wrote it, or I’d use this app if someone else built it.I’m always working in-line with my values."
 
 
 Well to answer the question of the article,"When to quit" ? 
@@ -76,7 +76,7 @@ Quit when necessary, not when you cant. When you cant, postpond it.You can event
 
 
 But always remember :
-### “We all start in the same place: no money, no resources, no contacts, no experience. The difference is that some people — the winners — choose to start anyway.” James Clear
+> “We all start in the same place: no money, no resources, no contacts, no experience. The difference is that some people — the winners — choose to start anyway.” James Clear
 
 
 
