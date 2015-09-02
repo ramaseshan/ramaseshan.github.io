@@ -80,7 +80,8 @@ But always remember :
 
 If you are interested in contributing to charcha, please do write to us.
 <a href="mailto:hello@charcha.space">hello@charcha.space</a>
-You could follow charcha here : https://github.com/charcha
+
+You could follow charcha here : [https://github.com/charcha](https://github.com/charcha)
 
 
 
