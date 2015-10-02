@@ -14,8 +14,6 @@ share:
 date: 2015-04-02T00:04:26-04:00
 ---
 
-## What is SaltStack
-
 SaltStack is a infrastructure management tool, that is scalable ( can manage up to thousands of servers ) and written in python. Salt also does a lot of remote execution and configuration management too.
 
 The official docs can be found here : http://docs.saltstack.com/en/latest/

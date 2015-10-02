@@ -282,7 +282,7 @@ header::after {
   font-size: 60px;
   display: block;
   text-align: center;
-  color: rgba({{ site.theme-color }}, 0.4);
+  color: #ff6d00;
 }
 article:last-of-type::after {
   content: "";

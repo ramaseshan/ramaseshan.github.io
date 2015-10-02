@@ -3,12 +3,13 @@ layout: post
 title: IT life and a remote village
 modified:
 categories: Life
-description: "General usage of SaltStack with Python"
+description: "What is an IT company doing in a rural place. The company I work for."
 tags: [life,thoughts,work,rural_working]
 comments:
 share:
 date: 2015-08-15T00:04:26-04:00
 ---
+Everybody has dreams in life. 
 
 ### Part 1 : History
 

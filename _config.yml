@@ -1,6 +1,6 @@
 
 # The name of your website.
-name: Ramaseshan's (aka turaco) Scribbles
+name: Ramaseshan's (aka turaco) Scribbles <br />
 
 description:
 
@@ -37,19 +37,19 @@ lang: en
 show-subtitle: true
 display-social-icons: false
 
-footer-text: Writing with love in Jwkyll , themed with <a href="http://steinvc.github.io/holo-alfa/">Holo Alfa</a>.<br /> Jekyll theme crafted by <a href="http://steinvc.github.io/holo-alfa/">Stijn</a>.
+footer-text: Writing with love in Jekyll , themed with <a href="http://steinvc.github.io/holo-alfa/">Holo Alfa</a>.<br /> Jekyll theme crafted by <a href="http://steinvc.github.io/holo-alfa/">Stijn</a>.
 
 # Preferably 64px in height. Leave empty = disable.
 logo-image: # /img/logo.png
 
 # Toolbar color for Chrome on Android.
-theme-color-attr: "#00f0ff"
+theme-color-attr: "#ff6d00"
 
 # Color of Microsoft live Tile.
-ms-tile-color: "#00f0ff"
+ms-tile-color: "#ff6d00"
 
 # Color used throughout the theme. Format: R, G, B.
-theme-color: 230, 81, 0 # Original: 0, 240, 255
+theme-color: 0, 81, 230 # Original: 0, 240, 255
 
 # Text color used throughout the theme. Format: R, G, B.
 text-color: 0, 0, 0 # Original: 0, 0, 0
