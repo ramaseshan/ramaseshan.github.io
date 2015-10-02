@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why did I end up working for an IT firm in a remote village called Tagachguppe"
+title: IT life and a remote village
 modified:
 categories: Life
 description: "General usage of SaltStack with Python"

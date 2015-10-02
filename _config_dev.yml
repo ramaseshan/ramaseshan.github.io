@@ -1,26 +1,28 @@
 
 # The name of your website.
-name: Ramaseshan's (aka turaco) Scribbles
+name: Holo Alfa
 
 description:
 
   # Description of your site. This will show up in google.
-  meta: Free Software Activist.
+  meta: Holo Alfa is a minimalist, mobile first Jekyll theme with focus on readability and content.
 
   # Description of your site. This will show up on the front page.
-  subtitle: <center>Failed a 1000 times before,I fear not 1 more . . .</center>
+  subtitle: Holo Alfa is a minimalist, mobile first Jekyll theme with focus on readability and content. <a href="https://github.com/steinvc/holo-alfa">&lt;/&gt; on Github</a>.
 
 author:
-  name: turaco
+  name: Dr. Jekyll # Change this!
 
   # Necessary for contact page
-  email: ram.seshan.cs@gmail.com # Change this!
+  email: your@email.com # Change this!
 
   # Optional text (html) to display after author name. Leave empty if you don't
   # want it.
   info:
 
-url: 
+# The URL of the homepage of your site (without trailing slash). Leave this
+# empty when you run Jekyll locally.
+url: http://localhost:4000
 baseurl: ""
 
 # language attribute in <html> element.
@@ -49,7 +51,7 @@ theme-color-attr: "#00f0ff"
 ms-tile-color: "#00f0ff"
 
 # Color used throughout the theme. Format: R, G, B.
-theme-color: 230, 81, 0 # Original: 0, 240, 255
+theme-color: 0, 240, 255 # Original: 0, 240, 255
 
 # Text color used throughout the theme. Format: R, G, B.
 text-color: 0, 0, 0 # Original: 0, 0, 0
@@ -65,20 +67,20 @@ display-author-post-page: true
 display-author-front-page: true
 
 # http://alanwsmith.com/jekyll-liquid-date-formatting-examples
-date_format: "%d %-b, %Y"
+date_format: "%b %-d, %Y"
 
 # Minimal screen-width after which the navigation will change position from
 # vertical to horizontal.
 nav-breaking-point: 520px
 
 # Number of posts on each page.
-paginate: 5
+paginate: 3
 
 # Display links for the previous and next post on post pages.
 display-next-prev-post: false
 
 # Leave empty if you don't want comments on post pages.
-disqus-shortname: ramaseshan
+disqus-shortname:
 
 
 ################
@@ -91,13 +93,13 @@ twitter:
 youtube:
 instagram:
 tumblr:
-facebook: ramaseshanmukund
+facebook:
 google-plus:
 reddit:
 soundcloud:
 medium:
 linkedin:
-github: ramaseshan
+github:
 behance:
 codepen:
 dribbble:
@@ -114,7 +116,7 @@ paypal:
 # Useful for translating into other languages.
 
 var_on_the_web: On the web
-var_read: Read More ... # Text after each post summary on the homepage.
+var_read: Read # Text after each post summary on the homepage.
 var_newer: Newer
 var_older: Older
 var_next_post: Next post
@@ -123,8 +125,8 @@ var_less_than_a_minute_read: Less than a minute read
 var_min_read: min read # Text after reading time. Example: 5 min read.
 var_post_by: Post by
 var_guest_post_by: Guest post by
-var_your_email: ram.seshan.cs@gmail.com
-var_your_message: Drop a Line
+var_your_email: Your email
+var_your_message: Your message
 
 
 ##################

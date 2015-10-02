@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The thoughts that went through my mind when someone asked me 'Should we stop Charcha ?'"
+title: When should we quit ?
 modified:
 categories: Life
 description: "My thoughts when someone asked me 'Should we stop CHARCHA ?'"
