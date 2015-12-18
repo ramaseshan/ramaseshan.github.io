@@ -5,7 +5,7 @@ modified:
 categories: Technology
 description: "Building a Custom Centos 6.6 after reading a lot of links"
 tags: [centos6.6,resping,custombuilds]
-comments:
+comments: true
 share:
 date: 2015-11-02
 ---
