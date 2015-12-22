@@ -157,5 +157,6 @@ Exactly, "Free Basics" is not about connecting people, it is about making a bett
 
 Thanks a lot Dude, I am really not going to support "Free Basics".
 
-I would like to thank Prasanna Venkatesh of FSHM (Free Software Hardware Movement, Puducherry) for that from his blog which gave me a quicker understanding of what is going wrong with "Free Basics"
+I would like to thank my friend, who dosent want to be named, for letting me write through our conversation here.
+I would also like to thank Prasanna Venkatesh of FSHM (Free Software Hardware Movement, Puducherry) for that from his blog which gave me a quicker understanding of what is going wrong with "Free Basics"
  <a href="https://prasannavenkadesh.github.io/blog/revolt-against-free-basics.html" target="_blank">Click here for the article on his blog</a>. Do read through his article. 
