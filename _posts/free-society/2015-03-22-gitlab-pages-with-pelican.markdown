@@ -7,7 +7,7 @@ description: Static Website hosting on gitlab.
 tags: [free-society, gitlab, pelican, python, static_website]
 comments: true
 share:
-date: 2015-12-23T05:29:11-04:00
+date: 2015-12-23T21:00:26
 ---
 
 Still writing and cleaning up. Hold up for a few more minutes.
