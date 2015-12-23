@@ -10,10 +10,10 @@ share:
 date: 2015-12-23T21:00:26
 ---
 
-Still writing and cleaning up. Hold up for a few more minutes.
-
 I my last article I wrote about gitlab pages.
 This article is a quick note on how to deploy your static blog using pelican.
+
+**This is a more developer /  computer known person prespective. If something goes wrong do ping me**
 
 Steps :
 
@@ -32,7 +32,7 @@ Steps :
 12. cd content
 13. create a file called first-blog.md (or any name). Write content following this pattern http://docs.getpelican.com/en/3.6.3/content.html
 14. cd ../
-15. type the command "pelican"
+15. type the command "pelican" . Once this command is done, you should have a folder called output. If that has generated, proceed, else hold up and cross check any errors or missed steps.
 16. create a file called .gitlab-ci.yml and enter the following contents in it.
 """
 pages:
@@ -55,4 +55,6 @@ You are done. If all go good, you should see the build starting in your projects
 
 Now sit back and relax until the build completes. Once done, you should see your website live at your-username.gitlab.io/blog
 
-If you are looking for a ready repo, have a look at the sample repo I have putup here : https://gitlab.com/voidspacexyz/pages/tree/master
+If you are looking for a ready repo, have a look at the [sample repo](https://gitlab.com/voidspacexyz/pages/tree/master) I have put up
+
+If you have written it better, send me a PR :-)
