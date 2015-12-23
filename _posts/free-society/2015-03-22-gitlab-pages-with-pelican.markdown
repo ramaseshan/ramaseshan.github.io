@@ -57,4 +57,6 @@ Now sit back and relax until the build completes. Once done, you should see your
 
 If you are looking for a ready repo, have a look at the [sample repo](https://gitlab.com/voidspacexyz/pages/tree/master) I have put up
 
+I also have a sample blog running [here](http://voidspacexyz.gitlab.io/pages)
+
 If you have written it better, send me a PR :-)
