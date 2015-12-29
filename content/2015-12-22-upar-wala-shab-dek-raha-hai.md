@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Upar wala shab dekh raha hai
+title: Upar wala shab dek raha hai
 modified:
-categories: Life
+category: life
 description: "The Impact of Free Basics or Internet.org and Net Neutrality to everybody"
 tags: [freedom_internet,internet, net_neutrality, ]
 comments: true
@@ -18,11 +18,11 @@ Well to answer all these questions, lets go back to an old topic which stirred e
 
 The following is the discussion that took place between Me and My friend on the same topic.
 
-Dude, I know about it. It is about "No discrimination between websites" and "all websites being treated equally" right ? 
+Dude, I know about it. It is about "No discrimination between websites" and "all websites being treated equally" right ?
 
 Yes Man, In short, "All the internet traffic is to be treated equally with no discrimination".
 
-Dude, some of friends sent an email to the govt and they leaked all the  email-id's I suppose :-(, 
+Dude, some of friends sent an email to the govt and they leaked all the  email-id's I suppose :-(,
 
 Man, thanks to your friends for sending it. I really cant help with the leak. I was also affected by that. But wait, the fight is not over. It is just taken another turn.
 
@@ -33,19 +33,19 @@ No Man, Sometime back the awesome facebook introduced something called "internet
 Well that was an awesome move, they claim to say about 2 billions are still not on facebook and they want to enable them to be online soon. I mean this is really nice, a great effort I would call. The only bad move I would call was, they went ahead with reliance, which already gives "Free Facebook Pack", in places where there is no tower at all (which is literally most of the places).
 Anyways a good buisness decision. To continue on with the story, a lot of people opposed it in the name of all knowing god "Internet", and then facebook made another decision recently called, "Free Basics".
 
-Well , I know about internet.org dude, I read an article about it. they say free basic internet for everyone, But what is this free basics ? 
+Well , I know about internet.org dude, I read an article about it. they say free basic internet for everyone, But what is this free basics ?
 
-Nothing, plainly "internet.org" renamed. Dead simple. 
+Nothing, plainly "internet.org" renamed. Dead simple.
 
-Ok Dude, so what is with "Free Basics" now ? 
+Ok Dude, so what is with "Free Basics" now ?
 
-Simple. It shouldn't exist in the best interest of "YOU" ...! 
+Simple. It shouldn't exist in the best interest of "YOU" ...!
 
-Dude, What ?? 
+Dude, What ??
 
-I know Man, let it not exist. 
+I know Man, let it not exist.
 
-Ok hold on dude, Why ?? 
+Ok hold on dude, Why ??
 
 Well I would say, prove why do you need !
 
@@ -55,25 +55,25 @@ So, to make you understand, let me explain what "Free Basics" is doing. Ok, so b
 
 Now lets say, you have a website. Even if you dont, just assume you have one. Now your website is available on the internet.Right ? No matter if they use facebook or not, no matter which part of the world they are in.
 
-But now with "Free Basics" you have to make sure your website also has to be available on "Free Basics". 
+But now with "Free Basics" you have to make sure your website also has to be available on "Free Basics".
 
 What ? Ooh ! Is that going to cost me ?
 
-Actually, No. If "free of cost". 
+Actually, No. If "free of cost".
 
-Phew ! For a monent I though, will facebook make me pay in "$'s" ?  Ok,Great, So how do I apply for that ? 
+Phew ! For a monent I though, will facebook make me pay in "$'s" ?  Ok,Great, So how do I apply for that ?
 
-Hey ! hold on, dont do that. Dont register your website on "Free Basics". 
+Hey ! hold on, dont do that. Dont register your website on "Free Basics".
 
 What Why ? ? Its free right ?
 
-Yes it is free, but not free. 
+Yes it is free, but not free.
 
 Ok, Dude ! you are confusing me now.
 
 Ok, lets take a different example. Out of "Free Basics" for sometime.
 
-Lets say, I will buy you a beautiful 2BHK in the heart of Bangalore. All costs paid by me. And let you stay in that. 
+Lets say, I will buy you a beautiful 2BHK in the heart of Bangalore. All costs paid by me. And let you stay in that.
 
 Dude, Why would you even do that ?
 
@@ -99,11 +99,11 @@ Hope you are ok with the conditions, let me get the paper work done.
 
 Dude, seriously ? You are restricting me dude. I am a free person. I can do anything I want. I can wonder anywhere I like to. Why are your restricting ??
 
-Man, Look, these are the conditions on which I will buy you a "Fully Furnished 2BHK " in the heart of Bangalore. Cumon Man, its an awesome offer, dont let the conditions stop you. 
+Man, Look, these are the conditions on which I will buy you a "Fully Furnished 2BHK " in the heart of Bangalore. Cumon Man, its an awesome offer, dont let the conditions stop you.
 
 Let me think about it dude, the CCTV monitoring is ok at the entrance, but why everywhere inside the home ?
 
-Man, cumon, your saftey and privacy is my first priority. 
+Man, cumon, your saftey and privacy is my first priority.
 
 but Dude, My GF will comeover sometimes, and CCTV is kinda disturbing our privacy dude.
 
@@ -123,7 +123,7 @@ Man, Are you sure ? 2BHK free of cost buddy. Who is going to offer you ? Serious
 
 Dude, forget it. I dont want it. I am rather happy with the way I am right now. I might not have to many things, but I am happy and free. I dont want somebody to rule me.
 
-Hm ! Great Man, If you dont want somebody to control your personal life, why are you accepting somebody controlling your digital life ? 
+Hm ! Great Man, If you dont want somebody to control your personal life, why are you accepting somebody controlling your digital life ?
 
 Dude ! What are you talking about ? Who is controlling my digital life ?
 
@@ -151,7 +151,7 @@ Dude, this is amazing dude, I will do that. But I have one more question. All th
 Now Man, that is a seroious question. This is what we call "Digital Divide". But here is a question back to you, if more people are not connected, then isin't the govt supposed to take actions to connect them ? Isint something like digital India be aimed at things like this ? We have laws and sections that can help India go digital. I am not aware of the exact sections , but I know people who can throw more light on that. If you are interested I will put you in touch with them.
 Also what we need to remember is, Internet should be a tool for development of a society, not a walled garden of information. Would Mark have invented "Facebook" if he were given an internet like "Free Basics".
 
-Dude, now that is another serious question. He surely would not have. 
+Dude, now that is another serious question. He surely would not have.
 
 Exactly, "Free Basics" is not about connecting people, it is about making a better buisness around the not connected people. Facebook dosent charge anybody at all. But still they are valued at a few billion dollars. What makes them so much important. It  is data. They now want more data. the more the data, the more the money for them. So never fall for these traps.
 
@@ -159,4 +159,4 @@ Thanks a lot Dude, I am really not going to support "Free Basics".
 
 I would like to thank my friend, who dosent want to be named, for letting me write through our conversation here.
 I would also like to thank Prasanna Venkatesh of FSHM (Free Software Hardware Movement, Puducherry) for that from his blog which gave me a quicker understanding of what is going wrong with "Free Basics"
- <a href="https://prasannavenkadesh.github.io/blog/revolt-against-free-basics.html" target="_blank">Click here for the article on his blog</a>. Do read through his article. 
+ <a href="https://prasannavenkadesh.github.io/blog/revolt-against-free-basics.html" target="_blank">Click here for the article on his blog</a>. Do read through his article.

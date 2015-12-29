@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Document Freedom Day Talk at Fractalio Data"
+title: Document Freedom Day Talk at Fractalio Data
 modified:
-categories: free-society
+category: free-society
 description: An step of the awareness program initiative by Fractalio Data
 tags: [free-society, document-freedom-day, dfd2015, opentalk ]
 image:
@@ -23,7 +23,7 @@ Date: 25 March 2015 from 11:00 to 11:45  <br />
 Place: Fractalio Data shared office space.  <br />
 
 ## About the Talk: <br />
-This DFD was celebrated along with the birthday of our colluege Ms.Prathiba. We had a cake cutting (for the birthday) which was followed a talk by Ramaseshan.S, along with Kiran Patil, Naveen and Raghuram who are a part of Engineering Team at Fractalio Data. A special thanks to be given to Pradeed of Data Lifecycle Company for helping us get organized. 
+This DFD was celebrated along with the birthday of our colluege Ms.Prathiba. We had a cake cutting (for the birthday) which was followed a talk by Ramaseshan.S, along with Kiran Patil, Naveen and Raghuram who are a part of Engineering Team at Fractalio Data. A special thanks to be given to Pradeed of Data Lifecycle Company for helping us get organized.
 
 This talk basically focussed on the following topics.
 
@@ -37,40 +37,21 @@ This talk basically focussed on the following topics.
 # Image gallery
 
 <div id="dfd_images">
-	<img src="/images/dfd-images/2015-03-24%2016.18.29.jpg">
-	<img src="/images/dfd-images/2015-03-24%2016.19.09.jpg">
-	<img src="/images/dfd-images/2015-03-24%2016.20.25.jpg">
-	<img src="/images/dfd-images/2015-03-24%2016.20.38.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.15.47.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.16.02.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.21.59.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.22.29.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.22.40.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.23.54.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.25.17.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.31.51.jpg">
-	<img src="/images/dfd-images/2015-03-25%2011.32.01.jpg">
+	<img src="/theme/images/dfd-images/2015-03-24%2016.18.29.jpg">
+	<img src="/theme/images/dfd-images/2015-03-24%2016.19.09.jpg">
+	<img src="/theme/images/dfd-images/2015-03-24%2016.20.25.jpg">
+	<img src="/theme/images/dfd-images/2015-03-24%2016.20.38.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.15.47.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.16.02.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.21.59.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.22.29.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.22.40.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.23.54.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.25.17.jpg">
+	<img src="/theme/images/dfd-images/2015-03-25%2011.31.51.jpg">
 </div>
 
 
 **We would like to thank Ms. Sangeetha for organising the event and the participants, and the DatalifeCycle Company for the space. Greater thanks to Ms. Prathiba for allowing us to celebrate DFD along with her birthday. Thanks to all the participants for attending.**
 
 **A special thanks for Free Software Foundation Tamilnadu(FSFTN http://fsftn.org/) and FSF (Free Software Foundation), for the stickers and swags that we used for distributing to the participants. We would also like to thank all the contributers in the Free and Open world, without whom this whole talk would not have been possible.**
-
-<!--
-<script>
-var dir = "/images/dfd-images/";
-var fileextension = ".jpg";
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {
-        //Lsit all png file names in the page
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location, "").replace("http:///", "");
-            $("#dfd_images").append($("<img src=/images/dfd-images/"+ filename + "></img>"));
-        });
-    }
-});
-</script>
--->

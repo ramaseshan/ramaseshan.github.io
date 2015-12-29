@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Voidspace'
-SITENAME = u'voidspace scribbles here'
+SITENAME = u'My life rants'
 SITEURL = ''
 
 PATH = 'content'
@@ -19,16 +19,19 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+DISQUS_SITENAME = "ramaseshan"
+
 # Blogroll
-LINKS = (('Home', '/'),
-         ('Presentations', '/presentations'),
-         ('About', '/about'),)
+#LINKS = (('Home', '/'), ('Presentations', '/presentations'),('About', '/about'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+TWITTER_USERNAME = 'voidspacexyz'
+SOCIAL = (('Twitter', '@voidspacexyz'),('Email', 'null@voidspace.xyz'),)
+GITHUB_NAME = "ramaseshan"
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 6
 THEME = 'theme'
+ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

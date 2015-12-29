@@ -18,43 +18,34 @@
 	{% block head %}{% endblock %}
 </head>
 <body>
-
-<div class="container">
 	{% include 'includes/nav.html'%}
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			{% block content %}{% endblock %}
-		</div>
-	</div> {# End row #}
-	<!-- <hr> -->
-</div> <!-- /container -->
-<footer class="aw-footer bg-danger">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 text-center center-block aw-bottom">
-				<p>&copy; {{ AUTHOR }} 2014</p>
-				<p>Powered by Pelican</p>
+			<div class="col-md-8 col-md-offset-2">
+				{% block content %}{% endblock %}
 			</div>
-		</div>
-	</div>
-</footer>
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$("div.collapseheader").click(function () {
-		$header = $(this).children("span").first();
-		$codearea = $(this).children(".input_area");
-		$codearea.slideToggle(500, function () {
-			$header.text(function () {
-				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+		</div> {# End row #}
+		<!-- <hr> -->
+	</div> <!-- /container -->
+
+	{% include 'includes/footer.html'%}
+
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("div.collapseheader").click(function () {
+			$header = $(this).children("span").first();
+			$codearea = $(this).children(".input_area");
+			$codearea.slideToggle(500, function () {
+				$header.text(function () {
+					return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+				});
 			});
 		});
 	});
-});
-</script>
-{% include "analytics.html" %}
-{% include "github.html" %}
+	</script>
+	{% include "analytics.html" %}
 </body>
 </html>

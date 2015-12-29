@@ -2,7 +2,7 @@
 layout: post
 title: Why did I decide to call myself "voidspace"
 modified:
-categories: Life
+category: Life
 description: "Why call myself voidspace"
 tags: [me,myself,myname,nickname]
 comments:
@@ -27,10 +27,3 @@ My email is null@voidspace.xyz (if you were wondering)
 
 
 null is a computer keyword meaning nothing, just empty :-D
-
-
-
-
-
-
-

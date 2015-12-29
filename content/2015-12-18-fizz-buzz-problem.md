@@ -2,7 +2,7 @@
 layout: post
 title: The typical Mistake in a FizzBuzz Problem
 modified:
-categories: Technology
+category: Technology
 description: "My first interview question to anybody, their responses and my learnings"
 tags: [interview,problem-solving,fizzbuzz]
 comments: true
@@ -18,7 +18,7 @@ So what is the question ?
 
 That is a simple question, but a lot of them get it wrong the first time. So what do people write as solutions ?
 
-{% highlight python %}
+    :::python
     for i in range(100):
         if i % 3 == 0:
             print "Fizz"
@@ -28,7 +28,6 @@ That is a simple question, but a lot of them get it wrong the first time. So wha
             print "FizzBuzz"
         else:
             print i
-{% endhighlight %}
 
 Well this is the code, that all the people I have talked to have written in their first attempt. I used to actually be surprised initially but then I started expecting this answer.
 
@@ -41,7 +40,7 @@ Second, we dont think like a computer. We think like human beings. The above log
 
 When I say the code is wrong to an interview candidate, I usually see this reaction in their face "Hey ! Hold on !! What is wrong with that code ?"
 
-Simple. That is when I say "Execute your logic for the first 20 numbers." Yep, you could try too. If you still get the output right for the first 20 number on the above code, again read up the second point I have talked about. "Think like a computer, not like a human being" . 
+Simple. That is when I say "Execute your logic for the first 20 numbers." Yep, you could try too. If you still get the output right for the first 20 number on the above code, again read up the second point I have talked about. "Think like a computer, not like a human being" .
 
 If you still get it right, dont worry , here is why it is wrong.
 1. Lets take 3. The above code will print "Fizz" . Why ? The first if condition satisfies.
@@ -50,21 +49,21 @@ If you still get it right, dont worry , here is why it is wrong.
 
 
 Right ! Hey hold on ...! Something is fishy here.  The third condition .. Isint that wrong ?? Wouldnt that print "Fizz" instead of "FizzBuzz" ?
-If this thought has come to you, yes you are right. 
+If this thought has come to you, yes you are right.
 
 Lets analyze a little more. What does an "if" statement do ?
 
 When a condition is satisfied, it executes a set of instructions. Right ? Now for a moment lets think like machines and look at the above code.
 
-For the number 15, lets run though the first condition. 15 is divisible by 3. Yes the condition is true. So it would print "Fizz". Thats it. That is how a machine works. 
+For the number 15, lets run though the first condition. 15 is divisible by 3. Yes the condition is true. So it would print "Fizz". Thats it. That is how a machine works.
 
-That is the difference between "Natural Human Language" and "Computer Language". 
+That is the difference between "Natural Human Language" and "Computer Language".
 
 > A computer can just execute instruction given by you and me. It does not have a brain by itself.
 
 So without further delay, lets get to the solution.
 
-{% highlight python %}
+    :::python
     for i in range(100):
         if (i % 3 == 0) and (i % 5 ==0):
             print "FizzBuzz"
@@ -74,13 +73,12 @@ So without further delay, lets get to the solution.
             print "Buzz"
         else:
             print i
-{% endhighlight %}
 
 You see the re-arrangement in the logic ? Now run though the three numbers 3,5,15 and the code should work good.
 
 (Psst ! Can you optimize the code a little more ?)
 
-The point is very simple. When a problem has an ambiguity in terms of condition, always double think the conditions. 
+The point is very simple. When a problem has an ambiguity in terms of condition, always double think the conditions.
 
-And as always, when you write code 
+And as always, when you write code
 > Always think like a computer.

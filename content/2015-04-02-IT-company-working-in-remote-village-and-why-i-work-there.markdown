@@ -2,14 +2,14 @@
 layout: post
 title: IT life and a remote village
 modified:
-categories: Life
+category: Life
 description: "What is an IT company doing in a rural place. The company I work for."
 tags: [life,thoughts,work,rural_working]
 comments:
 share:
 date: 2015-08-15T00:04:26-04:00
 ---
-Everybody has dreams in life. 
+Everybody has dreams in life.
 
 ### Part 1 : History
 
@@ -22,14 +22,14 @@ Started attending interviews. One after one, I failed,I didnt make it. Finally d
 This was the thought that was in me. My good luck, I got 3 calls the week I stayed with my mom. And this I decided I have to crack them. Went back to bangalore, and the first interview was a failure. I didnt know what else to do except sitting in the room and cry (tough I didnt get tears :-D). That is when my roommate told "You cant crack every interview. There are interviews meant for you. Learn from your mistakes, and give the next interview a better shot".
 I did, and I made it to a company called Fractalio Data. Cracked the next interview too. Now I really had to take a call in which company I had to join.
 
-During my interview with fractalio, the founders hinted me saying they just didnt wanted to be an IT company and they will move the company to a small village called Taggachguppe. Plus, this was not a typical web development firm. They were working with "Data Storage systems", actually they were building one. For a long time I have been using and talking about GNU/Linux, and here was a real chance, that will let me really work on it. So I went ahead and joined them. 
+During my interview with fractalio, the founders hinted me saying they just didnt wanted to be an IT company and they will move the company to a small village called Taggachguppe. Plus, this was not a typical web development firm. They were working with "Data Storage systems", actually they were building one. For a long time I have been using and talking about GNU/Linux, and here was a real chance, that will let me really work on it. So I went ahead and joined them.
 
 ### Part 2 : Geography
 Its been 6 months now me working at Fractalio, and we just moved into an extremely remote village called Taggachguppe, in Magadi Road. It is adventure here everyday.
 
 #### The Place
 
-Its a beautiful place, fully sorrounded by hills, trees, cows, hens, peococks. Its a  beautiful natural scenary every morning. We can see the clouds kissing the mountains, peacocks making their beautiful noise, hens waking us up every morning.To walk from our stay to office, we come down a cement roaded hill. Every where around is a agricultural farm. You can also see some people crazy for money, bomb the hills every evening to get stones off,gun sounds killing animals (though I dont know where they shoot them). Hardly any mobile signals, I feel like mostly off the grid. 
+Its a beautiful place, fully sorrounded by hills, trees, cows, hens, peococks. Its a  beautiful natural scenary every morning. We can see the clouds kissing the mountains, peacocks making their beautiful noise, hens waking us up every morning.To walk from our stay to office, we come down a cement roaded hill. Every where around is a agricultural farm. You can also see some people crazy for money, bomb the hills every evening to get stones off,gun sounds killing animals (though I dont know where they shoot them). Hardly any mobile signals, I feel like mostly off the grid.
 
 #### The People
 

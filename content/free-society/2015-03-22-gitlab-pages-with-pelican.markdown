@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Using Pelican to deploy static website in Gitlab."
+title: Using Pelican to deploy static website in Gitlab.
 modified:
-categories: free-society
+category: free-society
 description: Static Website hosting on gitlab.
 tags: [free-society, gitlab, pelican, python, static_website]
 comments: true
@@ -48,7 +48,7 @@ pages:
   - master
 """
 17. git add .
-18. git commit -m "Blog on gitlab" 
+18. git commit -m "Blog on gitlab"
 19. git push
 
 You are done. If all go good, you should see the build starting in your projects build page.
