@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Using Pelican to deploy static website in Gitlab. — My life rants</title>
+	<meta name="description" content="Title: Using Pelican to deploy static website in Gitlab.; Date: 2015-12-23; Author: Voidspace">
+	<meta name="author" content="Voidspace">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="/theme/html5.js"></script>
+		<![endif]-->
+	<link href="/theme/css/ipython.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+	<link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/css/local.css" rel="stylesheet">
+	<link href="/theme/css/pygments.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Menu</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Voidspace</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/">Home</a></li>
+      <li><a href="http://voidspace.xyz/presentations">Presentations</a></li>
+<!--      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About</a></li> -->
+      <li><a href="https://gitlab.com/voidspacexyz" target="_blank">*GitLab</a></li>
+      <li><a href="https://github.com/ramaseshan" target="_blank">Github</a></li>
+    </ul>
+  </div>
+</nav>	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="text-center article-header">
+		<h1 itemprop="name headline" class="article-title">Using Pelican to deploy static website in Gitlab.</h1>
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<h4 itemprop="name">Voidspace</h4>
+		</span>
+		<time datetime="2015-12-23T21:00:26+01:00" itemprop="datePublished">Wed 23 December 2015</time>
+	</div>
+	<div>
+		Category:
+		<span itemprop="articleSection">
+			<a href="/category/free-society.html" rel="category">free-society</a>
+		</span>
+	</div>
+ 
+	<div>
+		Tags:
+		<span itemprop="keywords">
+			<a href="/tag/free-society.html" rel="tag">[free-society</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/gitlab.html" rel="tag">gitlab</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/pelican.html" rel="tag">pelican</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/python.html" rel="tag">python</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/static_website.html" rel="tag">static_website]</a>
+		</span>
+	</div>
+	<div itemprop="articleBody" class="article-body"><p>I my last article I wrote about gitlab pages.
+This article is a quick note on how to deploy your static blog using pelican.</p>
+<p><strong>This is a more developer /  computer known person prespective. If something goes wrong do ping me</strong></p>
+<p>Steps :</p>
+<ol>
+<li>Sign up for an account at gitlab.com</li>
+<li>Create a new project called blog.</li>
+<li>Open the GNU/Linux terminal and follow the steps.</li>
+<li>sudo dnf install python-pip (Fedora) or sudo apt-get install python-pip (Debian)</li>
+<li>sudo pip install virtualenv</li>
+<li>cd ~/Documents</li>
+<li>git clone https://gitlab.com/your_username/blog.git</li>
+<li>virtualenv blog</li>
+<li>cd blog</li>
+<li>source bin activate</li>
+<li>pip install pelican markdown</li>
+<li>pelican-quickstart .Once you hit this command,enter the details of your site name and description. Go with the defaults for the rest of the things.</li>
+<li>cd content</li>
+<li>create a file called first-blog.md (or any name). Write content following this pattern http://docs.getpelican.com/en/3.6.3/content.html</li>
+<li>cd ../</li>
+<li>type the command "pelican" . Once this command is done, you should have a folder called output. If that has generated, proceed, else hold up and cross check any errors or missed steps.</li>
+<li>create a file called .gitlab-ci.yml and enter the following contents in it.
+"""
+pages:
+  stage: deploy
+  script:</li>
+<li>mkdir .public</li>
+<li>cp -r output/* .public</li>
+<li>mv .public public
+  artifacts:
+    paths:<ul>
+<li>public
+  only:</li>
+</ul>
+</li>
+<li>master
+"""</li>
+<li>git add .</li>
+<li>git commit -m "Blog on gitlab"</li>
+<li>git push</li>
+</ol>
+<p>You are done. If all go good, you should see the build starting in your projects build page.</p>
+<p>Now sit back and relax until the build completes. Once done, you should see your website live at your-username.gitlab.io/blog</p>
+<p>If you are looking for a ready repo, have a look at the <a href="https://gitlab.com/voidspacexyz/pages/tree/master">sample repo</a> I have put up</p>
+<p>I also have a sample blog running <a href="http://voidspacexyz.gitlab.io/pages">here</a></p>
+<p>If you have written it better, send me a PR :-)</p></div>
+	<hr>
+	<h2>Comments</h2>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="voidspacexyz">Tweet this article</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ramaseshan';
+    var disqus_title = 'Using Pelican to deploy static website in Gitlab.';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			</div>
+		</div> 		<!-- <hr> -->
+	</div> <!-- /container -->
+
+<footer class="aw-footer bg-danger">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center center-block aw-bottom">
+				<p>Powered by <a href="http://www.getpelican.com">Pelican</a> which takes awesome great of the awesome <a href="https://python.org"> Python </a> </p>
+
+				“Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/"> Creative Commons Attribution 3.0 Unported License</a>.
+				<br />
+				Copyright 2016 &copy; Voidspace.”
+					
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("div.collapseheader").click(function () {
+			$header = $(this).children("span").first();
+			$codearea = $(this).children(".input_area");
+			$codearea.slideToggle(500, function () {
+				$header.text(function () {
+					return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+				});
+			});
+		});
+	});
+	</script>
+</body>
+</html>

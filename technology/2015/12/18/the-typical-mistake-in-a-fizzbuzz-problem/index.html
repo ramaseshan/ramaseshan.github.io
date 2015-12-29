@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The typical Mistake in a FizzBuzz Problem — My life rants</title>
+	<meta name="description" content="Title: The typical Mistake in a FizzBuzz Problem; Date: 2015-12-18; Author: Voidspace">
+	<meta name="author" content="Voidspace">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="/theme/html5.js"></script>
+		<![endif]-->
+	<link href="/theme/css/ipython.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+	<link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/css/local.css" rel="stylesheet">
+	<link href="/theme/css/pygments.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Menu</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Voidspace</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/">Home</a></li>
+      <li><a href="http://voidspace.xyz/presentations">Presentations</a></li>
+<!--      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About</a></li> -->
+      <li><a href="https://gitlab.com/voidspacexyz" target="_blank">*GitLab</a></li>
+      <li><a href="https://github.com/ramaseshan" target="_blank">Github</a></li>
+    </ul>
+  </div>
+</nav>	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="text-center article-header">
+		<h1 itemprop="name headline" class="article-title">The typical Mistake in a FizzBuzz Problem</h1>
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<h4 itemprop="name">Voidspace</h4>
+		</span>
+		<time datetime="2015-12-18T00:00:00+01:00" itemprop="datePublished">Fri 18 December 2015</time>
+	</div>
+	<div>
+		Category:
+		<span itemprop="articleSection">
+			<a href="/category/technology.html" rel="category">Technology</a>
+		</span>
+	</div>
+ 
+	<div>
+		Tags:
+		<span itemprop="keywords">
+			<a href="/tag/interview.html" rel="tag">[interview</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/problem-solving.html" rel="tag">problem-solving</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/fizzbuzz.html" rel="tag">fizzbuzz]</a>
+		</span>
+	</div>
+	<div itemprop="articleBody" class="article-body"><p>This is one such interview question that no fresher has answered right in the first attempt. After about taking a few 10 interview candidates at my workplace, I am actually suprised. I was able to get it right the fist attempt.</p>
+<p>So what is the question ?</p>
+<blockquote>
+<p>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.</p>
+</blockquote>
+<p>That is a simple question, but a lot of them get it wrong the first time. So what do people write as solutions ?</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Fizz&quot;</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Buzz&quot;</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;FizzBuzz&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">i</span>
+</pre></div>
+
+
+<p>Well this is the code, that all the people I have talked to have written in their first attempt. I used to actually be surprised initially but then I started expecting this answer.</p>
+<p>So what is wrong here ? What are we to learn from a code like this ?</p>
+<p>First, we fail to realize that we are writing a set of instructions,  a computer is going to execute. Well a computer is a brain less machine. Yes it does not have a brain like you and me.
+So any instruction given to a computer has to be step by step. It has to be logical.</p>
+<p>Second, we dont think like a computer. We think like human beings. The above logic when thought like a human, will work perfectly. Why ? we apparently apply a certain amount of logic on top of a logic. Yep ! Knowingly or unknowingly we do that.</p>
+<p>When I say the code is wrong to an interview candidate, I usually see this reaction in their face "Hey ! Hold on !! What is wrong with that code ?"</p>
+<p>Simple. That is when I say "Execute your logic for the first 20 numbers." Yep, you could try too. If you still get the output right for the first 20 number on the above code, again read up the second point I have talked about. "Think like a computer, not like a human being" .</p>
+<p>If you still get it right, dont worry , here is why it is wrong.
+1. Lets take 3. The above code will print "Fizz" . Why ? The first if condition satisfies.
+2. Lets take 5. The above code will print "Buzz". Why ? The second condition satisfies.
+3. Lets take 15. Why 15 ? It is the first number divisible from both 3 and 5. The above code will print "FizzBuzz". Why ? The third condition satisfies.</p>
+<p>Right ! Hey hold on ...! Something is fishy here.  The third condition .. Isint that wrong ?? Wouldnt that print "Fizz" instead of "FizzBuzz" ?
+If this thought has come to you, yes you are right.</p>
+<p>Lets analyze a little more. What does an "if" statement do ?</p>
+<p>When a condition is satisfied, it executes a set of instructions. Right ? Now for a moment lets think like machines and look at the above code.</p>
+<p>For the number 15, lets run though the first condition. 15 is divisible by 3. Yes the condition is true. So it would print "Fizz". Thats it. That is how a machine works.</p>
+<p>That is the difference between "Natural Human Language" and "Computer Language".</p>
+<blockquote>
+<p>A computer can just execute instruction given by you and me. It does not have a brain by itself.</p>
+</blockquote>
+<p>So without further delay, lets get to the solution.</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;FizzBuzz&quot;</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Fizz&quot;</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Buzz&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">i</span>
+</pre></div>
+
+
+<p>You see the re-arrangement in the logic ? Now run though the three numbers 3,5,15 and the code should work good.</p>
+<p>(Psst ! Can you optimize the code a little more ?)</p>
+<p>The point is very simple. When a problem has an ambiguity in terms of condition, always double think the conditions.</p>
+<p>And as always, when you write code</p>
+<blockquote>
+<p>Always think like a computer.</p>
+</blockquote></div>
+	<hr>
+	<h2>Comments</h2>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="voidspacexyz">Tweet this article</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ramaseshan';
+    var disqus_title = 'The typical Mistake in a FizzBuzz Problem';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			</div>
+		</div> 		<!-- <hr> -->
+	</div> <!-- /container -->
+
+<footer class="aw-footer bg-danger">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center center-block aw-bottom">
+				<p>Powered by <a href="http://www.getpelican.com">Pelican</a> which takes awesome great of the awesome <a href="https://python.org"> Python </a> </p>
+
+				“Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/"> Creative Commons Attribution 3.0 Unported License</a>.
+				<br />
+				Copyright 2016 &copy; Voidspace.”
+					
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("div.collapseheader").click(function () {
+			$header = $(this).children("span").first();
+			$codearea = $(this).children(".input_area");
+			$codearea.slideToggle(500, function () {
+				$header.text(function () {
+					return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+				});
+			});
+		});
+	});
+	</script>
+</body>
+</html>

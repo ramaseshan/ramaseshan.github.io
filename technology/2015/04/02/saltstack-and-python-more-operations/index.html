@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>SaltStack and Python- More Operations — My life rants</title>
+	<meta name="description" content="Title: SaltStack and Python- More Operations; Date: 2015-04-02; Author: Voidspace">
+	<meta name="author" content="Voidspace">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="/theme/html5.js"></script>
+		<![endif]-->
+	<link href="/theme/css/ipython.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+	<link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/css/local.css" rel="stylesheet">
+	<link href="/theme/css/pygments.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Menu</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Voidspace</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/">Home</a></li>
+      <li><a href="http://voidspace.xyz/presentations">Presentations</a></li>
+<!--      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About</a></li> -->
+      <li><a href="https://gitlab.com/voidspacexyz" target="_blank">*GitLab</a></li>
+      <li><a href="https://github.com/ramaseshan" target="_blank">Github</a></li>
+    </ul>
+  </div>
+</nav>	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="text-center article-header">
+		<h1 itemprop="name headline" class="article-title">SaltStack and Python- More Operations</h1>
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<h4 itemprop="name">Voidspace</h4>
+		</span>
+		<time datetime="2015-04-02T00:00:00+02:00" itemprop="datePublished">Thu 02 April 2015</time>
+	</div>
+	<div>
+		Category:
+		<span itemprop="articleSection">
+			<a href="/category/technology.html" rel="category">Technology</a>
+		</span>
+	</div>
+ 
+	<div>
+		Tags:
+		<span itemprop="keywords">
+			<a href="/tag/technology.html" rel="tag">[technology</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/saltstack.html" rel="tag">saltstack</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/python.html" rel="tag">python</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/saltapi.html" rel="tag">saltapi</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/salt-operations.html" rel="tag">salt-operations]</a>
+		</span>
+	</div>
+	<div itemprop="articleBody" class="article-body"><p>This post talks about doing various operations using SaltStack and Python. If you are looking for the basics, please refer here. ramaseshan.github.io/technology/2015/04/02/saltstack-and-python/</p>
+<p>A basic ls command example</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">salt.client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">salt</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">LocalClient</span><span class="p">()</span>
+<span class="n">client</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;cmd.run&#39;</span><span class="p">,[</span><span class="s">&#39;ls&#39;</span><span class="p">])</span>
+</pre></div>
+
+
+<p>and the output would be :</p>
+<div class="highlight"><pre><span class="s">&quot;{&#39;Seshan@fractalio&#39;: &#39;Desktop</span><span class="se">\n</span><span class="s">Documents</span><span class="se">\n</span><span class="s">Downloads</span><span class="se">\n</span><span class="s">Music</span><span class="se">\n</span><span class="s">Pictures</span><span class="se">\n</span><span class="s">Public</span><span class="se">\n</span><span class="s">Templates</span><span class="se">\n</span><span class="s">Videos</span><span class="se">\n</span><span class="s">test&#39;}&quot;</span>
+</pre></div>
+
+
+<p>What does the above code do ?
+The above code in the terminal is executed as</p>
+<div class="highlight"><pre><span class="n">salt</span> <span class="s">&#39;*&#39;</span> <span class="n">cmd</span><span class="o">.</span><span class="n">run</span> <span class="n">ls</span>
+</pre></div>
+
+
+<p>Lets look at the various components of the code.</p>
+<div class="highlight"><pre><span class="o">-</span> <span class="n">client</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">LocalClient</span> <span class="nb">object</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="s">&#39;\*&#39;</span> <span class="o">--</span> <span class="n">tells</span> <span class="n">to</span> <span class="n">target</span> <span class="n">this</span> <span class="n">command</span> <span class="n">at</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">minions</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">replace</span> <span class="n">the</span> <span class="o">*</span> <span class="k">with</span> <span class="n">things</span> <span class="n">like</span> <span class="s">&#39;192.168.1.20\*&#39;</span> <span class="n">which</span> <span class="n">will</span> <span class="n">target</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">minions</span> <span class="k">with</span> <span class="n">key</span> <span class="mi">20</span><span class="o">*.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">called</span> <span class="n">gobbling</span><span class="o">.</span> <span class="n">SaltStack</span> <span class="n">also</span> <span class="n">supports</span> <span class="n">regular</span> <span class="n">expressions</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="n">cmd</span><span class="o">.</span><span class="n">run</span> <span class="o">--</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">salt</span> <span class="n">module</span><span class="p">,</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">run</span> <span class="n">a</span> <span class="n">command</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">terminal</span> <span class="ow">and</span> <span class="n">get</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">output</span> <span class="kn">from</span> <span class="nn">the</span> <span class="nn">client.</span> <span class="nn">Eg</span>  <span class="nn">of</span> <span class="nn">other</span> <span class="nn">modules</span><span class="p">,</span> <span class="n">test</span><span class="o">.</span><span class="n">ping</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">highstate</span> <span class="n">etc</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="p">[</span><span class="s">&#39;ls&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">parameter</span> <span class="ow">or</span> <span class="n">the</span> <span class="n">command</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">be</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">cmd</span><span class="o">.</span><span class="n">run</span><span class="o">.</span> <span class="n">Other</span> <span class="n">examples</span> <span class="n">are</span><span class="p">,</span> <span class="s">&quot;service network restart&quot;</span> <span class="ow">or</span> <span class="nb">any</span> <span class="n">command</span> <span class="n">that</span> <span class="n">you</span> <span class="n">execute</span> <span class="n">can</span> <span class="n">be</span> <span class="n">a</span> <span class="n">parameter</span><span class="o">.</span>
+</pre></div>
+
+
+<p>So what happens when you want to pass a parameter to ls ?? then you can say ,</p>
+<div class="highlight"><pre><span class="n">client</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;cmd.run&#39;</span><span class="p">,[</span><span class="s">&#39;ls&#39;</span><span class="p">,</span><span class="s">&#39;/tmp&#39;</span><span class="p">])</span><span class="o">.</span>
+</pre></div>
+
+
+<p>Most of the things you can accomplish by the above, but have a list of all the available modules in saltstack here : http://docs.saltstack.com/en/latest/ref/modules/all/</p>
+<p>I am sure you would have also heard about grains in SaltStack.
+If you want to target minions by the grains, then here is what you have to do.</p>
+<div class="highlight"><pre><span class="n">client</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;roles:primary&#39;</span><span class="p">,</span> <span class="s">&#39;cmd.run&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;ls&#39;</span><span class="p">],</span> <span class="n">expr_form</span><span class="o">=</span><span class="s">&#39;grain&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>So instead of using '*', we use the grain key and value, and say explicitly that the expr_form='grain'.</p></div>
+	<hr>
+	<h2>Comments</h2>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="voidspacexyz">Tweet this article</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ramaseshan';
+    var disqus_title = 'SaltStack and Python- More Operations';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			</div>
+		</div> 		<!-- <hr> -->
+	</div> <!-- /container -->
+
+<footer class="aw-footer bg-danger">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center center-block aw-bottom">
+				<p>Powered by <a href="http://www.getpelican.com">Pelican</a> which takes awesome great of the awesome <a href="https://python.org"> Python </a> </p>
+
+				“Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/"> Creative Commons Attribution 3.0 Unported License</a>.
+				<br />
+				Copyright 2016 &copy; Voidspace.”
+					
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("div.collapseheader").click(function () {
+			$header = $(this).children("span").first();
+			$codearea = $(this).children(".input_area");
+			$codearea.slideToggle(500, function () {
+				$header.text(function () {
+					return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+				});
+			});
+		});
+	});
+	</script>
+</body>
+</html>
