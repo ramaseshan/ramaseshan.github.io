@@ -2,7 +2,7 @@
 layout: post
 title: SaltStack and Python
 modified:
-categories: Technology
+category: Technology
 description: "General usage of SaltStack with Python"
 tags: [technology,saltstack,python,saltapi, salt-basics]
 image:
