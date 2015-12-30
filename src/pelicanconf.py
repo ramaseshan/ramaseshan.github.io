@@ -19,19 +19,10 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-DISQUS_SITENAME = "ramaseshan"
-
 # Blogroll
 #LINKS = (('Home', '/'), ('Presentations', '/presentations'),('About', '/about'),)
-
-# Social widget
-TWITTER_USERNAME = 'voidspacexyz'
-SOCIAL = (('Twitter', '@voidspacexyz'),('Email', 'null@voidspace.xyz'),)
-GITHUB_NAME = "ramaseshan"
 
 DEFAULT_PAGINATION = 6
 THEME = 'theme'
 ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
