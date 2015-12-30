@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>My life rants</title><link href="/" rel="alternate"></link><link href="/feeds/technology.atom.xml" rel="self"></link><id>/</id><updated>2015-12-31T00:00:00+01:00</updated><entry><title>The typical Mistake in a FizzBuzz Problem</title><link href="/technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-12-18:technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/</id><summary type="html">&lt;p&gt;This is one such interview question that no fresher has answered right in the first attempt. After about taking a few 10 interview candidates at my workplace, I am actually suprised. I was able to get it right the fist attempt.&lt;/p&gt;
+&lt;p&gt;So what is the question ?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That is a simple question, but a lot of them get it wrong the first time. So what do people write as solutions ?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fizz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Buzz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;FizzBuzz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Well this is the code, that all the people I have talked to have written in their first attempt. I used to actually be surprised initially but then I started expecting this answer.&lt;/p&gt;
+&lt;p&gt;So what is wrong here ? What are we to learn from a code like this ?&lt;/p&gt;
+&lt;p&gt;First, we fail to realize that we are writing a set of instructions,  a computer is going to execute. Well a computer is a brain less machine. Yes it does not have a brain like you and me.
+So any instruction given to a computer has to be step by step. It has to be logical.&lt;/p&gt;
+&lt;p&gt;Second, we dont think like a computer. We think like human beings. The above logic when thought like a human, will work perfectly. Why ? we apparently apply a certain amount of logic on top of a logic. Yep ! Knowingly or unknowingly we do that.&lt;/p&gt;
+&lt;p&gt;When I say the code is wrong to an interview candidate, I usually see this reaction in their face "Hey ! Hold on !! What is wrong with that code ?"&lt;/p&gt;
+&lt;p&gt;Simple. That is when I say "Execute your logic for the first 20 numbers." Yep, you could try too. If you still get the output right for the first 20 number on the above code, again read up the second point I have talked about. "Think like a computer, not like a human being" .&lt;/p&gt;
+&lt;p&gt;If you still get it right, dont worry , here is why it is wrong.
+1. Lets take 3. The above code will print "Fizz" . Why ? The first if condition satisfies.
+2. Lets take 5. The above code will print "Buzz". Why ? The second condition satisfies.
+3. Lets take 15. Why 15 ? It is the first number divisible from both 3 and 5. The above code will print "FizzBuzz". Why ? The third condition satisfies.&lt;/p&gt;
+&lt;p&gt;Right ! Hey hold on ...! Something is fishy here.  The third condition .. Isint that wrong ?? Wouldnt that print "Fizz" instead of "FizzBuzz" ?
+If this thought has come to you, yes you are right.&lt;/p&gt;
+&lt;p&gt;Lets analyze a little more. What does an "if" statement do ?&lt;/p&gt;
+&lt;p&gt;When a condition is satisfied, it executes a set of instructions. Right ? Now for a moment lets think like machines and look at the above code.&lt;/p&gt;
+&lt;p&gt;For the number 15, lets run though the first condition. 15 is divisible by 3. Yes the condition is true. So it would print "Fizz". Thats it. That is how a machine works.&lt;/p&gt;
+&lt;p&gt;That is the difference between "Natural Human Language" and "Computer Language".&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A computer can just execute instruction given by you and me. It does not have a brain by itself.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So without further delay, lets get to the solution.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;FizzBuzz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fizz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Buzz&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You see the re-arrangement in the logic ? Now run though the three numbers 3,5,15 and the code should work good.&lt;/p&gt;
+&lt;p&gt;(Psst ! Can you optimize the code a little more ?)&lt;/p&gt;
+&lt;p&gt;The point is very simple. When a problem has an ambiguity in terms of condition, always double think the conditions.&lt;/p&gt;
+&lt;p&gt;And as always, when you write code&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Always think like a computer.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="[interview"></category><category term="problem-solving"></category><category term="fizzbuzz]"></category></entry><entry><title>Building a Custom Centos 6.6 Respin</title><link href="/technology/2015/11/02/building-a-custom-centos-66-respin/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-11-02:technology/2015/11/02/building-a-custom-centos-66-respin/</id><summary type="html">&lt;p&gt;As a part of our work at Fractalio, we wanted to build a custom Cent- OS ISO, to be able to circulate it amongst people for them test and get a feel of what we are trying to build.  We had a trail once before and we had failed miserably building nothing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We build statues out of snow, and weep to see them melt. -- Walter Scott&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Well we wanted to give it a shot again. This time with the previous learnings as our pillar. This time we started reading a lot more articles and links to first understand what is being talked about and have a clear picture of what is to be done.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can't build a great building on a weak foundation. You must have a solid foundation if you're going to have a strong superstructure. -- Gordon B. Hinckley&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This article will share all the learning that I went through to actually get something working. So lets get started.&lt;/p&gt;
+&lt;p&gt;Best Practices&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Span a virtual machine with centos - 6.6 minimal installed. So that if something goes wrong it dosent mess up your system&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Pre-Requisites :&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A virtual machine&lt;/li&gt;
+&lt;li&gt;Centos 6.6 Minimal ISO&lt;/li&gt;
+&lt;li&gt;Internet or the packages (.rpm files) along with all the dependencies&lt;/li&gt;
+&lt;li&gt;A mind to be ready to expriment and learn :-)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So Span out the virtual machine you installed with Centos and execute the following instructions. Each command will also be accompanied with the details of why it is done. If you find something wrong, please do let me know in the comments. So poweron your virtual machine and follow on&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1 . Initial Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;yum -y install rsync yum-utils createrepo genisoimage  isomd5sum yum-downloadonly
+  &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;  &lt;/span&gt;
+&lt;span class="s2"&gt; - rsync to sync to actual iso to your re-spin&lt;/span&gt;
+&lt;span class="s2"&gt; - createrepo to make a folder with special permission so that the installed recognises the rpm inside this folder&lt;/span&gt;
+&lt;span class="s2"&gt; - genisoimage to generate the iso from the custom packages&lt;/span&gt;
+&lt;span class="s2"&gt; - yum-downloadonly  is a yum plugin to only download the rpms and not actually install it&lt;/span&gt;
+&lt;span class="s2"&gt; &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;2 . Get the files required&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /root
+mkdir respin-centos
+
+mount -o loop,ro /root/CentOS-6.6-x86_64-minimal.iso /mnt
+rsync -av /mnt/ .
+
+find . -name TRANS.TBL -exec rm -f &lt;span class="o"&gt;{}&lt;/span&gt; &lt;span class="se"&gt;\;&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;- respin-centos is the folder where we will build our iso from&lt;/span&gt;
+&lt;span class="s2"&gt;- mount is to actually mount the iso in some mount point so that you can access the files. This is in an assumption that you have copied the actual iso to the /root partitiion of the VM or the iso building machine.&lt;/span&gt;
+&lt;span class="s2"&gt;- rsync is needed because the cp sometimes dosent copy all the hidden files. files like .discinfo .treeinfo are missed when you do a cp -r . So we use rsync, which dosent differenciate between these files&lt;/span&gt;
+&lt;span class="s2"&gt;- The last line removed the unwanted files. that file is unwanted.&lt;/span&gt;
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;3 . Get the packages you want to install.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We will be installing python-devel, python-pip and httpd.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;yum install -y python-devel python-pip httpd --downloadonly --downloaddir /root/respin-centos/Packages/
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;- Remember the yum-downloadonly ? we are actually doing it here. This will download the the rpms and the dependency rpms to the Packages folder.&lt;/span&gt;
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;4 . Test the rpms&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now we check the package we add in ISO above is require any dependencies.If require than we add  dependencies.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;rpm –initdb –dbpath /root/build/Packages/
+
+rpm -ivh –test –dbpath /root/build/Packages/ /root/build/Packages/*.rpm
+After using above &lt;span class="nb"&gt;command &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; output is as shown below than we need to resolve fail dependencies.
+
+warning: /root/build/Packages/acl-2.2.49-6.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+error: Failed dependencies:
+/etc/mime.types is needed by httpd-2.2.15-26.el6.centos.x86_64
+apr-util-ldap is needed by httpd-2.2.15-26.el6.centos.x86_64
+httpd-tools &lt;span class="o"&gt;=&lt;/span&gt; 2.2.15-26.el6.centos is needed by httpd-2.2.15-26.el6.centos.x86_64
+libapr-1.so.0&lt;span class="o"&gt;()(&lt;/span&gt;64bit&lt;span class="o"&gt;)&lt;/span&gt; is needed by httpd-2.2.15-26.el6.centos.x86_64
+libaprutil-1.so.0&lt;span class="o"&gt;()(&lt;/span&gt;64bit&lt;span class="o"&gt;)&lt;/span&gt; is needed by httpd-2.2.15-26.el6.centos.x86_64
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Do not worry about warning messages.Our focus is only on fail dependencies as shown above.We require to download failed dependencies.Using below command to check yum provides these dependencies.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;yum provides “*/etc/mime.types*”
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once you download all  dependencies  once again run below command to check all dependencies downloaded.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;rpm -ivh –test –dbpath /root/build/Packages/ /root/build/Packages/*.rpm
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The log show  following texts if all dependencies downloaded.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;warning: /root/build/Packages/acl-2.2.49-6.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+Preparing… &lt;span class="c"&gt;########################################### [100%]&lt;/span&gt;
+installing package filesystem-2.4.30-3.el6.x86_64 needs 8KB on the /mnt filesystem.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;5 . Repodata&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We need a file called the comps.xml to actually get the iso to work. Follow the steps below to actually get the file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ls repodata/
+34bae2d3c9c78e04ed2429923bc095005af1b166d1a354422c4c04274bae0f59-c6-minimal-x86_64.xml
+490d05bedc0f8be64c5c26a3c2a804b817eec00fe42223d1fb856566fa248130-primary.xml.gz
+5291f680f7b6afd2444e583202951977779200bc5a295922ef816a90476e493e-filelists.sqlite.bz2
+6e147c9aea5bf4c0f1ba7ecf759ddd3a259003a7f12a5a74398c9f05d672573d-primary.sqlite.bz2
+98678399cf20d3bcc860229b9a3ba5d99a4446e95947030d567113e412fcc412-filelists.xml.gz
+ce2d698b9fb1413b668443e88835a0642cea8f387c7f25cc946f56dd93f109bb-c6-minimal-x86_64.xml.gz
+dc720ad0a977caf5eb6dee0648c29e420a22e2f4277e099c925ee727de0735cd-other.sqlite.bz2
+e0d5ad3bff4d0bd6ffd5037d6e76049b09c1d4f697445be6071d100f865a46f3-other.xml.gz
+repomd.xml
+
+gunzip repodata/ce2d698b9fb1413b668443e88835a0642cea8f387c7f25cc946f56dd93f109bb-c6-minimal-x86_64.xml.gz
+
+ls repodata/
+34bae2d3c9c78e04ed2429923bc095005af1b166d1a354422c4c04274bae0f59-c6-minimal-x86_64.xml
+490d05bedc0f8be64c5c26a3c2a804b817eec00fe42223d1fb856566fa248130-primary.xml.gz
+5291f680f7b6afd2444e583202951977779200bc5a295922ef816a90476e493e-filelists.sqlite.bz2
+6e147c9aea5bf4c0f1ba7ecf759ddd3a259003a7f12a5a74398c9f05d672573d-primary.sqlite.bz2
+98678399cf20d3bcc860229b9a3ba5d99a4446e95947030d567113e412fcc412-filelists.xml.gz
+ce2d698b9fb1413b668443e88835a0642cea8f387c7f25cc946f56dd93f109bb-c6-minimal-x86_64.xml
+dc720ad0a977caf5eb6dee0648c29e420a22e2f4277e099c925ee727de0735cd-other.sqlite.bz2
+e0d5ad3bff4d0bd6ffd5037d6e76049b09c1d4f697445be6071d100f865a46f3-other.xml.gz
+repomd.xml
+
+mv repodata/ce2d698b9fb1413b668443e88835a0642cea8f387c7f25cc946f56dd93f109bb-c6-minimal-x86_64.xml repodata/comps.xml
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;6 . Create the repo&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;createrepo -u &lt;span class="s2"&gt;&amp;quot;media://`head -1 .discinfo`&amp;quot;&lt;/span&gt; -g repodata/comps.xml .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;7 . The Kickstart file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The ks file is very important. Refer to a sample kickstart file here (https://github.com/ramaseshan/respin-iso/centos-6.6-x86-64)&lt;/p&gt;
+&lt;p&gt;If you look at the reference kickstart, there would be two post sections. One with chroot and the other without chroot (nochroot).
+The difference between the two is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to do some non root operations like copying files that just have to be present in the new iso they can be done through the nochroot stuff.  Things like, copy, untar, modifying conf files, sed, awk etc. Hold There is more readon.
+How are we actually copying files is simple, there are 3 componenets involved here, the vmlinuz (the actual installer, /mnt/source, wehere the iso is mounted, and the /mnt/sysimage, where the installing system is mounted. Read the sameple ks file to see a live example)
+Refer to the next section on where the to be copied files will be.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But if you want root operations like useradd, chmod etc, do it in the post section with chroot on. **&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;8 . How to copy files&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;root@localhost respin-centos&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c"&gt;# mkdir tar&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@localhost respin-centos&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c"&gt;# touch tar/test&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;root@localhost respin-centos&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c"&gt;# ls tar/&lt;/span&gt;
+&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you can copy this tar folder like this in the nochroot section of the ks file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cp -r /mnt/source/tar /mnt/sysimage/opt/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;9 . isolinux&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;chmod &lt;span class="m"&gt;755&lt;/span&gt; isolinux/isolinux.cfg
+&lt;span class="c"&gt;#modify the isolinux.cfg to make it work like this&lt;/span&gt;
+
+default linux
+prompt 0
+timeout 600
+display boot.msg
+F1 boot.msg
+F2 options.msg
+F3 general.msg
+F4 param.msg
+F5 rescue.msg
+label linux
+kernel vmlinuz
+append &lt;span class="nv"&gt;initrd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;initrd.img &lt;span class="nv"&gt;ks&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;cdrom:/ks.cfg &lt;span class="o"&gt;(&lt;/span&gt; Add this entry in this line &lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;10 . Generate the iso&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkisofs -r -R -J -T -v -no-emul-boot &lt;span class="se"&gt;\&lt;/span&gt;
+  -boot-load-size &lt;span class="m"&gt;4&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+  -boot-info-table &lt;span class="se"&gt;\&lt;/span&gt;
+  -V &lt;span class="s2"&gt;&amp;quot;respin-centos&amp;quot;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+  -p &lt;span class="s2"&gt;&amp;quot;Ramaseshan&amp;quot;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+  -A &lt;span class="s2"&gt;&amp;quot;respin-centos-build1&amp;quot;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+  -b isolinux/isolinux.bin &lt;span class="se"&gt;\&lt;/span&gt;
+  -c isolinux/boot.cat &lt;span class="se"&gt;\&lt;/span&gt;
+  -x &lt;span class="s2"&gt;&amp;quot;lost+found&amp;quot;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+  --joliet-long &lt;span class="se"&gt;\&lt;/span&gt;
+  -o /tmp/boot.iso .
+
+ 89.86% &lt;span class="k"&gt;done&lt;/span&gt;, estimate finish Fri Oct &lt;span class="m"&gt;30&lt;/span&gt; 16:19:23 2015
+ 92.17% &lt;span class="k"&gt;done&lt;/span&gt;, estimate finish Fri Oct &lt;span class="m"&gt;30&lt;/span&gt; 16:19:23 2015
+ 94.47% &lt;span class="k"&gt;done&lt;/span&gt;, estimate finish Fri Oct &lt;span class="m"&gt;30&lt;/span&gt; 16:19:23 2015
+ 96.77% &lt;span class="k"&gt;done&lt;/span&gt;, estimate finish Fri Oct &lt;span class="m"&gt;30&lt;/span&gt; 16:19:23 2015
+ 99.08% &lt;span class="k"&gt;done&lt;/span&gt;, estimate finish Fri Oct &lt;span class="m"&gt;30&lt;/span&gt; 16:19:23 2015
+Total translation table size: 77608
+Total rockridge attributes bytes: 34111
+Total directory bytes: 59914
+Path table size&lt;span class="o"&gt;(&lt;/span&gt;bytes&lt;span class="o"&gt;)&lt;/span&gt;: 112
+Done with: The File&lt;span class="o"&gt;(&lt;/span&gt;s&lt;span class="o"&gt;)&lt;/span&gt;                             Block&lt;span class="o"&gt;(&lt;/span&gt;s&lt;span class="o"&gt;)&lt;/span&gt;    216770
+Writing:   Ending Padblock                         Start Block 216852
+Done with: Ending Padblock                         Block&lt;span class="o"&gt;(&lt;/span&gt;s&lt;span class="o"&gt;)&lt;/span&gt;    150
+Max brk space used 63000
+&lt;span class="m"&gt;217002&lt;/span&gt; extents written &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;423&lt;/span&gt; MB&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Yay !! We have the iso now. No go span another VM and start testing it :-)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To invent an airplane is nothing. To build one is something. But to fly is everything.   -- Otto Lilienthal&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More references :
+Checkout my gitrepo : https://github.com/ramaseshan/respin-iso/centos-6.6-x86-64&lt;/p&gt;
+&lt;p&gt;I have  my ks file and the quick commands docs and also the reference links I had used. Incase if you feel, I have written too much and need the commands quick. :-)&lt;/p&gt;</summary><category term="[centos6.6"></category><category term="resping"></category><category term="custombuilds]"></category></entry><entry><title>SaltStack and Python</title><link href="/technology/2015/04/02/saltstack-and-python/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python/</id><summary type="html">&lt;p&gt;SaltStack is a infrastructure management tool, that is scalable ( can manage up to thousands of servers ) and written in python. Salt also does a lot of remote execution and configuration management too.&lt;/p&gt;
+&lt;p&gt;The official docs can be found here : http://docs.saltstack.com/en/latest/&lt;/p&gt;
+&lt;p&gt;This post is going to talk about how to use SaltStack with python. We at Fractalio Data, heavily rely on SaltStack for various operations. We basically build Data Storage Servers, and we want to regulary keep package updates running on all the servers, manage configurations, get status and resource utiliation of each individual nodes, restart services incase of failures, transfer log and other files between nodes and more. Apart from the development team, our testing team is completely automated using SaltStack. We have automated the test suite for one server, and same test suite is executed on all the servers parallely and the final results and gathered from all the servers and mined for all useful data.&lt;/p&gt;
+&lt;p&gt;We will discuss a basic usage of SaltStack with python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites :
+    1. You should have installed Salt master and have atleast one salt minion.
+    2. You should have received the minion request on the master (not necessarily accepted)
+    3. You should be the root user or the user who has access to salt. It will be defined in the master config (/etc/salt/master grep for user)
+    4. This code has to be run on the same machine as Salt master.&lt;/p&gt;
+&lt;p&gt;Open the terminal and go to the python console typing python&lt;/p&gt;
+&lt;p&gt;We will use the Salt wheel client to accept the minions. Wheels are used for interating with various parts of salt.&lt;/p&gt;
+&lt;p&gt;This will get all the pending minions to be accepted.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;salt.wheel&lt;/span&gt;
+&lt;span class="n"&gt;opts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;master_config&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/etc/salt/master&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;#The path of your salt master configuration&lt;/span&gt;
+&lt;span class="n"&gt;wheel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Wheel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Initialize the wheel with various salt opts&lt;/span&gt;
+&lt;span class="n"&gt;keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;key.list_all&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="n"&gt;pending_minions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;minions_pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;pending_minions&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and this code would accept it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;pending_minions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;key.accept&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+                &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Error accepting Minion key for &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Error accepting Minion key for &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; : &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Viola ! And you are done accepting the minions. Lets first test if the minions are accepted properly and explore more on what the above code is doing.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;salt.client&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LocalClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;test.ping&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Seshan@fractalio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;  &lt;span class="c"&gt;# Yay, the minion has responded.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So lets now explore more of what the above code is doing.&lt;/p&gt;
+&lt;p&gt;In the first code block, we had these lines :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;key.list_all&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;span class="n"&gt;pending_minions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;minions_pre&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The keys variable will contain all the keys that the salt master contains. Irrespective of if they are accepted or not accpeted or rejected, the keys variable will contain all the information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The pending_minions will contain all the not accepted minions. Why is called minions_pre, why not minions_pending ?? Do an &lt;strong&gt; ls /etc/salt/pki/master/ &lt;/strong&gt; , and you will figure out.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The second code block :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;key.accept&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;The above code says the wheel client to passes 'accept' request and the minion key as an argument to the call_func. The whole if condition and the and try blocks are basic python to safely handle the failed cases and etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You have got the basic hello world working. Now lets explore more on this, shall we.
+ Read more here.  ramaseshan.github.io/technology/2015/04/02/saltstack-and-python-more-operations/&lt;/p&gt;</summary><category term="[technology"></category><category term="saltstack"></category><category term="python"></category><category term="saltapi"></category><category term="salt-basics]"></category></entry><entry><title>SaltStack and Python- More Operations</title><link href="/technology/2015/04/02/saltstack-and-python-more-operations/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python-more-operations/</id><summary type="html">&lt;p&gt;This post talks about doing various operations using SaltStack and Python. If you are looking for the basics, please refer here. ramaseshan.github.io/technology/2015/04/02/saltstack-and-python/&lt;/p&gt;
+&lt;p&gt;A basic ls command example&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;salt.client&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LocalClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cmd.run&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and the output would be :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="s"&gt;&amp;quot;{&amp;#39;Seshan@fractalio&amp;#39;: &amp;#39;Desktop&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Documents&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Downloads&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Music&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Pictures&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Public&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Templates&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;Videos&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;test&amp;#39;}&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;What does the above code do ?
+The above code in the terminal is executed as&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;salt&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;*&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Lets look at the various components of the code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;LocalClient&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;\*&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="n"&gt;tells&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;minions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;replace&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;things&lt;/span&gt; &lt;span class="n"&gt;like&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;192.168.1.20\*&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;minions&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;*.&lt;/span&gt; &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;called&lt;/span&gt; &lt;span class="n"&gt;gobbling&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;SaltStack&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;supports&lt;/span&gt; &lt;span class="n"&gt;regular&lt;/span&gt; &lt;span class="n"&gt;expressions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;terminal&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;specified&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;the&lt;/span&gt; &lt;span class="nn"&gt;client.&lt;/span&gt; &lt;span class="nn"&gt;Eg&lt;/span&gt;  &lt;span class="nn"&gt;of&lt;/span&gt; &lt;span class="nn"&gt;other&lt;/span&gt; &lt;span class="nn"&gt;modules&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ping&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;highstate&lt;/span&gt; &lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;parameter&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;passed&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Other&lt;/span&gt; &lt;span class="n"&gt;examples&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;service network restart&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="nb"&gt;any&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;parameter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So what happens when you want to pass a parameter to ls ?? then you can say ,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;*&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cmd.run&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/tmp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Most of the things you can accomplish by the above, but have a list of all the available modules in saltstack here : http://docs.saltstack.com/en/latest/ref/modules/all/&lt;/p&gt;
+&lt;p&gt;I am sure you would have also heard about grains in SaltStack.
+If you want to target minions by the grains, then here is what you have to do.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;roles:primary&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cmd.run&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;expr_form&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;grain&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So instead of using '*', we use the grain key and value, and say explicitly that the expr_form='grain'.&lt;/p&gt;</summary><category term="[technology"></category><category term="saltstack"></category><category term="python"></category><category term="saltapi"></category><category term="salt-operations]"></category></entry></feed>

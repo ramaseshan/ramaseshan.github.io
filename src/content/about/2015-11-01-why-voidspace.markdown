@@ -2,7 +2,7 @@
 layout: post
 title: Why did I decide to call myself "voidspace"
 modified:
-category: Life
+category: about
 description: "Why call myself voidspace"
 tags: [me,myself,myname,nickname]
 comments:

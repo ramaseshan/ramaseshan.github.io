@@ -1,4 +1,4 @@
 output/
 .sass-cache/
-.pyc
-.pyo
+*.pyc
+*.pyo
