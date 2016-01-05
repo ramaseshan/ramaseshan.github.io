@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>My life rants</title><link href="/" rel="alternate"></link><link href="/feeds/about.atom.xml" rel="self"></link><id>/</id><updated>2015-12-31T00:00:00+01:00</updated><entry><title>Why did I decide to call myself "voidspace"</title><link href="/about/2015/11/01/why-did-i-decide-to-call-myself-voidspace/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-11-01:about/2015/11/01/why-did-i-decide-to-call-myself-voidspace/</id><summary type="html">&lt;p&gt;Not really any reason, but still trying to justify.....&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>My life rants</title><link href="/" rel="alternate"></link><link href="/feeds/about.atom.xml" rel="self"></link><id>/</id><updated>2016-01-05T00:00:00+01:00</updated><entry><title>Why did I decide to call myself "voidspace"</title><link href="/about/2015/11/01/why-did-i-decide-to-call-myself-voidspace/" rel="alternate"></link><updated>2016-01-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-11-01:about/2015/11/01/why-did-i-decide-to-call-myself-voidspace/</id><summary type="html">&lt;p&gt;Not really any reason, but still trying to justify.....&lt;/p&gt;
 &lt;p&gt;Having born in India, movies kinda create a craze in you. What always created a craze in me was that every actor in the movie started naming themselves after rajnikanth named hiself "SuperStar".
 Espically the recent guy called himself "Twinkle Twinkle Little Star". Crazy set of people, but I couldnt save myself from that :-D&lt;/p&gt;
 &lt;p&gt;So I had a list of names, the most of them I liked was "Turaco", a beautiful bird in the african regions.&lt;/p&gt;
@@ -8,7 +8,7 @@ Espically the recent guy called himself "Twinkle Twinkle Little Star". Crazy set
 .xyz, voidspace and .xyz went in well. It blended awesome :-)&lt;/p&gt;
 &lt;p&gt;So just went ahead.&lt;/p&gt;
 &lt;p&gt;My email is null@voidspace.xyz (if you were wondering)&lt;/p&gt;
-&lt;p&gt;null is a computer keyword meaning nothing, just empty :-D&lt;/p&gt;</summary><category term="[me"></category><category term="myself"></category><category term="myname"></category><category term="nickname]"></category></entry><entry><title>About Me</title><link href="/about/2015/01/15/about-me/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-01-15:about/2015/01/15/about-me/</id><summary type="html">&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;p&gt;null is a computer keyword meaning nothing, just empty :-D&lt;/p&gt;</summary><category term="[me"></category><category term="myself"></category><category term="myname"></category><category term="nickname]"></category></entry><entry><title>About Me</title><link href="/about/2015/01/15/about-me/" rel="alternate"></link><updated>2016-01-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-01-15:about/2015/01/15/about-me/</id><summary type="html">&lt;h2&gt;About Me&lt;/h2&gt;
 &lt;p&gt;A storage engineer and DevOps by profession, from India, who loves woking on GNU/Linux, Python and Shell. Free Software, Free Internet and a Free Knowledge Enthusiast.
 I also love promoting "Fedora + Free Software in Education".
 &lt;br /&gt;Apart from the Digital world, I love exploring on Renewable Energy and a Nature lover. Sanskrit as a language has also always been my passion.
@@ -28,12 +28,12 @@ And ya, if you were wondering , my codes live at my &lt;a href="https://github.c
 &lt;p&gt;Introduction to Free Software @ Alagapa University, Karaikudi&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Disclaimer : I am working on listing it all out. Listing only the recent ones. Missed out the presentations used in previous talks. Once I find them will add them to my &lt;a href="voidspace.xyz/presentations"&gt;presentations&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Disclaimer : I am working on listing it all out. Listing only the recent ones. Missed out the presentations used in previous talks. Once I find them will add them to my &lt;a href="http://voidspace.xyz/presentations360"&gt;presentations&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;About my workstation&lt;/h2&gt;
 &lt;p&gt;I run Fedora GNU/Linux 23 (the cinnamon spin :-D ). Free Software user in most of the tools.  &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; My God-mode is Tmux + ZSH + Oh-my-zsh + vim. &lt;/strong&gt;
 I sometimes use Atom Editor tough.&lt;/p&gt;
 &lt;p&gt;You can find the sticker I use in my laptop &lt;a href="https://github.com/ramaseshan/sticker-project/blob/master/Final/Free_Software_Fedora.png"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;My servers runs, CentOS 6.6, if you were wondering.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/"&gt; Home&lt;/a&gt; or &lt;a href="mailto:null@voidspace.xyz"&gt;Drop me a line&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>My Projects</title><link href="/about/2015/01/15/my-projects/" rel="alternate"></link><updated>2015-12-31T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-01-15:about/2015/01/15/my-projects/</id><summary type="html">&lt;p&gt;List of projects I am currently working on.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/"&gt; Home&lt;/a&gt; or &lt;a href="mailto:null@voidspace.xyz"&gt;Drop me a line&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>My Projects</title><link href="/about/2015/01/15/my-projects/" rel="alternate"></link><updated>2016-01-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-01-15:about/2015/01/15/my-projects/</id><summary type="html">&lt;p&gt;List of projects I am currently working on.&lt;/p&gt;
 &lt;p&gt;Work in Progress. Behold ...!&lt;/p&gt;</summary></entry></feed>
