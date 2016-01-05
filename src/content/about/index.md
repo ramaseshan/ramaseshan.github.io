@@ -27,7 +27,7 @@ My previous talks include:
 
 3. Introduction to Free Software @ Alagapa University, Karaikudi
 
-Disclaimer : I am working on listing it all out. Listing only the recent ones. Missed out the presentations used in previous talks. Once I find them will add them to my [presentations](voidspace.xyz/presentations).
+Disclaimer : I am working on listing it all out. Listing only the recent ones. Missed out the presentations used in previous talks. Once I find them will add them to my [presentations](http://voidspace.xyz/presentations360).
 
 ## About my workstation
 
