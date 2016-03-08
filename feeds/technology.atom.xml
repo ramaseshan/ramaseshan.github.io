@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>My life rants</title><link href="/" rel="alternate"></link><link href="/feeds/technology.atom.xml" rel="self"></link><id>/</id><updated>2016-02-05T00:00:00+01:00</updated><entry><title>The typical Mistake in a FizzBuzz Problem</title><link href="/technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/" rel="alternate"></link><updated>2016-02-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-12-18:technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/</id><summary type="html">&lt;p&gt;This is one such interview question that no fresher has answered right in the first attempt. After about taking a few 10 interview candidates at my workplace, I am actually suprised. I was able to get it right the fist attempt.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>My life rants</title><link href="/" rel="alternate"></link><link href="/feeds/technology.atom.xml" rel="self"></link><id>/</id><updated>2016-03-08T00:00:00+01:00</updated><entry><title>!(git commit virtualenv)</title><link href="/technology/2016/03/08/git-commit-virtualenv/" rel="alternate"></link><updated>2016-03-08T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2016-03-08:technology/2016/03/08/git-commit-virtualenv/</id><summary type="html">&lt;p&gt;So, To write my first blog post of the year, I was attending the first FSMK Sunday School of the year "Handson with Django". I was quite exicted about this for a few reasons.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The mentors were all participants of Django Girls in Bangalore this year&lt;/li&gt;
+&lt;li&gt;Their mentor was a fellow Free Software Activist at FSFTN (@srravya)&lt;/li&gt;
+&lt;li&gt;FSMK was celebrating women's months with all women speakers and mentors all over the month. First time I was hearing that. &lt;/li&gt;
+&lt;li&gt;I was absolutely jobless on that day, and attending this event meant spending some useful time along with some new people. (Pun intended :-D )&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So this article is not about the event, as such, but about a common mistake that people do with python. A common mistake that was also done in this hands-on.&lt;/p&gt;
+&lt;p&gt;Yes, that is "Checking in the virtualenv folder along with the source code of the project". This article is intended to explain , why that is a bad practice, and why you should never do such a mistake.&lt;/p&gt;
+&lt;p&gt;So before going into the details of why that was wrong and stuff, Lets understand what is a virtualenv, and why it is a good practise to use virtualenv to all your projects.&lt;/p&gt;
+&lt;p&gt;So, virtualenv by defination is about, creating seperate environments for project specific dependencies. In layman terms, lets say, we are working in "project 1" with dependencies Django-1.8 and django-allauth , and "project 2" with dependencies Django-1.9 and django-allauth. You can already see what could go wrong. If not, you see the two projects require the same package(Django) of different versions(1.8 and 1.9). Now your system cant have both the version installed together, so you need a solution here.&lt;/p&gt;
+&lt;p&gt;The most common solution is to upgrade your Django-1.8 to Django-1.9 and be happy. But that dosent work always. Once you start a project, you aim should be on writing code, rather than keep upgrading the package. The other way to put a solution is to say, "No matter what, I will work only with Django 1.9". But the question is how long ? And when you decide to upgrade, how many projects will you upgrade or and how sure are we with all the dependencies of the projects ?&lt;/p&gt;
+&lt;p&gt;So none of these are viable solutions. They could work for some small time fun projects, but wont run in the longer term.&lt;/p&gt;
+&lt;p&gt;Now lets say, I am exploring a lot of free projects based on python, and one project looks interesting. If I just want to explore to see if it works or not, why would I want to install the whole package in my base system? What if those packages, conflict with my base system or downgrade some of my system packages ? So what would you do ? No with python your dont need virtual machines. That is an overkill.&lt;/p&gt;
+&lt;p&gt;Now talking about the base system, we all do a common mistake forgetting the common statement in free world "With Great power comes greater responsibilities". Yes, if you understand what the great power is, I am talking about "sudo".&lt;/p&gt;
+&lt;p&gt;sudo pip install package_name.&lt;/p&gt;
+&lt;p&gt;No, again, unless you completely understand what the package does, and what system files does this change. Never do this, It could end up breaking a lot of the system dependencies. What ?? How ? Now that is another topic, will soon write up on "When to think sudo".&lt;/p&gt;
+&lt;p&gt;So what would you do ? Well, you already know the answer, but still spilling the beans, the solution is &lt;strong&gt;virtualenv&lt;/strong&gt;. How is that a solution ?&lt;/p&gt;
+&lt;p&gt;Virtualenv takes a different stand in solving the dependency issues of a project. So just like virtual machines, you create virtual python environments, that uses the &lt;strong&gt;system's python&lt;/strong&gt; and keep all your dependencies in a virtual machine like space, that will never conflict your system packges. &lt;/p&gt;
+&lt;p&gt;** Psst ! Please note and remember "System's Python". Very important.&lt;/p&gt;
+&lt;p&gt;Apparently , with virtualenv , You don’t want to have to set up a whole new server with a different version of Django to use it.&lt;/p&gt;
+&lt;p&gt;Assuming that has given a breif overview of what is a virtualenv and how it is useful, lets come to the actual problem.&lt;/p&gt;
+&lt;p&gt;We all use version control, for commiting and keeping our code publically visible for all various reasons.&lt;/p&gt;
+&lt;p&gt;So here is a task. &lt;/p&gt;
+&lt;p&gt;Here are a few python projects, have a look at their root tree source code . Dont take more than 2 min's for each project. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Django [https://github.com/django/django]&lt;/li&gt;
+&lt;li&gt;Numpy [https://sourceforge.net/projects/numpy/files/]&lt;/li&gt;
+&lt;li&gt;Scipy [https://sourceforge.net/projects/scipy/files/]&lt;/li&gt;
+&lt;li&gt;Pelican [https://github.com/getpelican/pelican]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So now to the question, in any of these projects that you saw, did you see the virtualenv files checked in ??&lt;/p&gt;
+&lt;p&gt;Very obviously "no" right ?? Great, point proved. !&lt;/p&gt;
+&lt;p&gt;Nopes, I am stopping there. I am kinda long always :-D&lt;/p&gt;
+&lt;p&gt;So lets also understand why, do they not checkin, and what are the effects of checking it in ?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Source/Version control system&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(GIT,SVN etc) are for the code you write, not for the system packages/binaries that is tied to your system.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The python could be wrongly referred.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;What ? Do you remember &amp;quot;system&amp;#39;s python&amp;quot; I mentioned before. How do you create a virtualenv ?
+
+Do you do a sudo apt/dnf install python-virtualenv
+
+and
+
+virtualenv blog
+
+Now when you do that command, it actually makes a reference to your system&amp;#39;s python binary for its execution. It does not install a new version of python.
+
+I know, you still dont trust me, well dont. Try it for yourself. Now open your command line, and explore . .
+
+Hmmm, How ?
+
+Here you go.
+
+ - Without any virtualenv, type &amp;quot;which python&amp;quot;
+        You should see &amp;quot;/usr/bin/python&amp;quot;
+ - Now Activate a virtualenv, and type &amp;quot;which python&amp;quot;
+
+   Now assuming, I have create a virtualenv called test in my   /tmp directory, my output would be something like &amp;quot;/tmp/test/bin/python&amp;quot;.
+
+    Now if you do a ls -latr /tmp/test/bin/python , you will see that it is referring itself to the system python ? Do you ?? Now that is a good reason, why you should never checkin your virtualenv.
+
+I am still not convinced. Well read on, the next 3 points.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;People use different versions of python.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Now, I am a young guy, but always loves to use the most stable stuff. So I dont use the latest python, I rather use a stable release. So now lets say, you create a virtualenv with a differnt version of python (python3 for example) and I still run a python2, your virtual machine&amp;#39;s binary would still be pointing to python3 of your system, but whereas when I pull the code on a system that dosent have python3, I would have to delete all your system generated binary files of python3 and recreate all the binaries for python2 again. Which is a lot of pain. (well actually not, with virtualenv all I have to do is to copy your source code and put it in a virtualenv I create with my python)
+
+So, not checking the virtualenv also solved the different versions of python issue.
+
+Looking it from a free software prespective, I am talking about Freedom to choose the version of python I want to run. But with checking in the virtualenv binaries, you would be forcing me either to do a lot more work, or to use the same version of python as your run.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;People use different architecture of computers.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Heard of 32 bit&amp;#39;s (Yes, they still exist a lot) , 64 bits, ARM etc. Well, when I compile python for differnt architectures, my binaries itself could change. In simple words, if you, say pip install mysql-python, on a 64 bit machine, and then someone with a 32 bit machine tries to use it, it will not work.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;People still use the most crappy and spying Windows, and yet they could use your code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Now, lets say, you have checked in the code with your virtualenv, and I pull it on a windows machine. (Remember that is just for an example, and Microsoft, if you are reading this, I dont pirate you anymore, rather I dont use you atall.) If your reaction to that was &amp;quot;Duh&amp;quot;, I tried to make a joke, and it ended up being a PJ. So move on.
+
+Now I pull down your code on a Windows machine, remember the virtualenv python references to something called &amp;quot;/usr/bin/python&amp;quot; ?? It dosent even exist in Windows. Its called python2.7.exe in windows (assuming you have setup all the environment variables correctly). Now that could fail.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;So always, remember always check in the source, not the result of running a process.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A virtualenv is rather platform specific; a Windows virtualenv may require different binaries than one created on Linux. The paths in the script files will almost certainly use absolute paths, not relative paths tying a virtualenv to a specific location on your harddisk.&lt;/p&gt;
+&lt;p&gt;And, the best practise is only to check the source and give a requirements.txt that will install all the required binaries for the project. (If this line didnt make sense, read up about, python-pip, pip freeze and pip install -r requirements.txt )&lt;/p&gt;
+&lt;p&gt;Assuming, you are satisfied with not checking in the virtualenv as a part of "source control system", the bigger question is, How did people even think of checking in the virtualenv ??&lt;/p&gt;
+&lt;p&gt;Well, aparently looking the docs of the tutorial of "Django Girls", where they have mentioned to checkin the virtualenv as a part of the code. &lt;a href="http://tutorial.djangogirls.org/en/deploy/index.html#starting-our-git-repository"&gt;Refer here for the instructions on Django Girls&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now to those who attended, Django Girls, if any of you could file a issue/bug in their docs, and ask them to correct it, it could help of a lot of people who are using it for reference.&lt;/p&gt;
+&lt;p&gt;Belive me, Django Girls tutorial, is one of the very best Django kickstarters available out there. Its totally awesome. To anybody who say, "I want to learn Django", that is the first url I always share. A great community effort, and being a community, we have to notify the people, when something is wrong.  So if some of you who attended Django Girls or mentored Django girls, would be kind enough to file a bug, and let them know, I would be a happy person.&lt;/p&gt;
+&lt;p&gt;Kudos and thanks again, if you read every line of the article or just skipped all the lines in between and came to this line just for a kudos :-D&lt;/p&gt;
+&lt;p&gt;Have Fun . . &lt;/p&gt;</summary><category term="[python"></category><category term="virtualenv"></category><category term="git"></category><category term="common-mistake]"></category></entry><entry><title>The typical Mistake in a FizzBuzz Problem</title><link href="/technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/" rel="alternate"></link><updated>2016-03-08T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-12-18:technology/2015/12/18/the-typical-mistake-in-a-fizzbuzz-problem/</id><summary type="html">&lt;p&gt;This is one such interview question that no fresher has answered right in the first attempt. After about taking a few 10 interview candidates at my workplace, I am actually suprised. I was able to get it right the fist attempt.&lt;/p&gt;
 &lt;p&gt;So what is the question ?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.&lt;/p&gt;
@@ -56,7 +166,7 @@ If this thought has come to you, yes you are right.&lt;/p&gt;
 &lt;p&gt;And as always, when you write code&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Always think like a computer.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="[interview"></category><category term="problem-solving"></category><category term="fizzbuzz]"></category></entry><entry><title>Building a Custom Centos 6.6 Respin</title><link href="/technology/2015/11/02/building-a-custom-centos-66-respin/" rel="alternate"></link><updated>2016-02-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-11-02:technology/2015/11/02/building-a-custom-centos-66-respin/</id><summary type="html">&lt;p&gt;As a part of our work at Fractalio, we wanted to build a custom Cent- OS ISO, to be able to circulate it amongst people for them test and get a feel of what we are trying to build.  We had a trail once before and we had failed miserably building nothing.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="[interview"></category><category term="problem-solving"></category><category term="fizzbuzz]"></category></entry><entry><title>Building a Custom Centos 6.6 Respin</title><link href="/technology/2015/11/02/building-a-custom-centos-66-respin/" rel="alternate"></link><updated>2016-03-08T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-11-02:technology/2015/11/02/building-a-custom-centos-66-respin/</id><summary type="html">&lt;p&gt;As a part of our work at Fractalio, we wanted to build a custom Cent- OS ISO, to be able to circulate it amongst people for them test and get a feel of what we are trying to build.  We had a trail once before and we had failed miserably building nothing.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We build statues out of snow, and weep to see them melt. -- Walter Scott&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -265,7 +375,7 @@ Max brk space used 63000
 &lt;/blockquote&gt;
 &lt;p&gt;More references :
 Checkout my gitrepo : https://github.com/ramaseshan/respin-iso/centos-6.6-x86-64&lt;/p&gt;
-&lt;p&gt;I have  my ks file and the quick commands docs and also the reference links I had used. Incase if you feel, I have written too much and need the commands quick. :-)&lt;/p&gt;</summary><category term="[centos6.6"></category><category term="resping"></category><category term="custombuilds]"></category></entry><entry><title>SaltStack and Python</title><link href="/technology/2015/04/02/saltstack-and-python/" rel="alternate"></link><updated>2016-02-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python/</id><summary type="html">&lt;p&gt;SaltStack is a infrastructure management tool, that is scalable ( can manage up to thousands of servers ) and written in python. Salt also does a lot of remote execution and configuration management too.&lt;/p&gt;
+&lt;p&gt;I have  my ks file and the quick commands docs and also the reference links I had used. Incase if you feel, I have written too much and need the commands quick. :-)&lt;/p&gt;</summary><category term="[centos6.6"></category><category term="resping"></category><category term="custombuilds]"></category></entry><entry><title>SaltStack and Python</title><link href="/technology/2015/04/02/saltstack-and-python/" rel="alternate"></link><updated>2016-03-08T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python/</id><summary type="html">&lt;p&gt;SaltStack is a infrastructure management tool, that is scalable ( can manage up to thousands of servers ) and written in python. Salt also does a lot of remote execution and configuration management too.&lt;/p&gt;
 &lt;p&gt;The official docs can be found here : http://docs.saltstack.com/en/latest/&lt;/p&gt;
 &lt;p&gt;This post is going to talk about how to use SaltStack with python. We at Fractalio Data, heavily rely on SaltStack for various operations. We basically build Data Storage Servers, and we want to regulary keep package updates running on all the servers, manage configurations, get status and resource utiliation of each individual nodes, restart services incase of failures, transfer log and other files between nodes and more. Apart from the development team, our testing team is completely automated using SaltStack. We have automated the test suite for one server, and same test suite is executed on all the servers parallely and the final results and gathered from all the servers and mined for all useful data.&lt;/p&gt;
 &lt;p&gt;We will discuss a basic usage of SaltStack with python.&lt;/p&gt;
@@ -333,7 +443,7 @@ Checkout my gitrepo : https://github.com/ramaseshan/respin-iso/centos-6.6-x86-64
 &lt;li&gt;The above code says the wheel client to passes 'accept' request and the minion key as an argument to the call_func. The whole if condition and the and try blocks are basic python to safely handle the failed cases and etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You have got the basic hello world working. Now lets explore more on this, shall we.
- Read more here.  ramaseshan.github.io/technology/2015/04/02/saltstack-and-python-more-operations/&lt;/p&gt;</summary><category term="[technology"></category><category term="saltstack"></category><category term="python"></category><category term="saltapi"></category><category term="salt-basics]"></category></entry><entry><title>SaltStack and Python- More Operations</title><link href="/technology/2015/04/02/saltstack-and-python-more-operations/" rel="alternate"></link><updated>2016-02-05T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python-more-operations/</id><summary type="html">&lt;p&gt;This post talks about doing various operations using SaltStack and Python. If you are looking for the basics, please refer here. ramaseshan.github.io/technology/2015/04/02/saltstack-and-python/&lt;/p&gt;
+ Read more here.  ramaseshan.github.io/technology/2015/04/02/saltstack-and-python-more-operations/&lt;/p&gt;</summary><category term="[technology"></category><category term="saltstack"></category><category term="python"></category><category term="saltapi"></category><category term="salt-basics]"></category></entry><entry><title>SaltStack and Python- More Operations</title><link href="/technology/2015/04/02/saltstack-and-python-more-operations/" rel="alternate"></link><updated>2016-03-08T00:00:00+01:00</updated><author><name>Voidspace</name></author><id>tag:,2015-04-02:technology/2015/04/02/saltstack-and-python-more-operations/</id><summary type="html">&lt;p&gt;This post talks about doing various operations using SaltStack and Python. If you are looking for the basics, please refer here. ramaseshan.github.io/technology/2015/04/02/saltstack-and-python/&lt;/p&gt;
 &lt;p&gt;A basic ls command example&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;salt.client&lt;/span&gt;
 &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LocalClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;

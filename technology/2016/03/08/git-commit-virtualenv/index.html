@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>!(git commit virtualenv) — My life rants</title>
+	<meta name="description" content="Title: !(git commit virtualenv); Date: 2016-03-08; Author: Voidspace">
+	<meta name="author" content="Voidspace">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="/theme/html5.js"></script>
+		<![endif]-->
+	<link href="/theme/css/ipython.css" rel="stylesheet">
+	<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+	<link href="/theme/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/theme/css/local.css" rel="stylesheet">
+	<link href="/theme/css/pygments.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Menu</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Voidspace</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="/">Home</a></li>
+      <li><a href="http://voidspace.xyz/presentations360">Presentations</a></li>
+      <li><a href="/about/2015/01/15/my-projects/">Projects</a></li>
+      <li><a href="/about/2015/01/15/about-me/">About</a></li>
+      <li><a href="https://gitlab.com/voidspacexyz" target="_blank">*GitLab</a></li>
+      <li><a href="https://github.com/ramaseshan" target="_blank">Github</a></li>
+    </ul>
+  </div>
+</nav>	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="text-center article-header">
+		<h1 itemprop="name headline" class="article-title">!(git commit virtualenv)</h1>
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<h4 itemprop="name">Voidspace</h4>
+		</span>
+		<time datetime="2016-03-08T00:00:00+01:00" itemprop="datePublished">Tue 08 March 2016</time>
+	</div>
+	<div>
+		Category:
+		<span itemprop="articleSection">
+			<a href="/category/technology.html" rel="category">Technology</a>
+		</span>
+	</div>
+	<div>
+		Tags:
+		<span itemprop="keywords">
+			<a href="/tag/python.html" rel="tag">[python</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/virtualenv.html" rel="tag">virtualenv</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/git.html" rel="tag">git</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="/tag/common-mistake.html" rel="tag">common-mistake]</a>
+		</span>
+	</div>
+	<div itemprop="articleBody" class="article-body"><p>So, To write my first blog post of the year, I was attending the first FSMK Sunday School of the year "Handson with Django". I was quite exicted about this for a few reasons.</p>
+<ol>
+<li>The mentors were all participants of Django Girls in Bangalore this year</li>
+<li>Their mentor was a fellow Free Software Activist at FSFTN (@srravya)</li>
+<li>FSMK was celebrating women's months with all women speakers and mentors all over the month. First time I was hearing that. </li>
+<li>I was absolutely jobless on that day, and attending this event meant spending some useful time along with some new people. (Pun intended :-D )</li>
+</ol>
+<p>So this article is not about the event, as such, but about a common mistake that people do with python. A common mistake that was also done in this hands-on.</p>
+<p>Yes, that is "Checking in the virtualenv folder along with the source code of the project". This article is intended to explain , why that is a bad practice, and why you should never do such a mistake.</p>
+<p>So before going into the details of why that was wrong and stuff, Lets understand what is a virtualenv, and why it is a good practise to use virtualenv to all your projects.</p>
+<p>So, virtualenv by defination is about, creating seperate environments for project specific dependencies. In layman terms, lets say, we are working in "project 1" with dependencies Django-1.8 and django-allauth , and "project 2" with dependencies Django-1.9 and django-allauth. You can already see what could go wrong. If not, you see the two projects require the same package(Django) of different versions(1.8 and 1.9). Now your system cant have both the version installed together, so you need a solution here.</p>
+<p>The most common solution is to upgrade your Django-1.8 to Django-1.9 and be happy. But that dosent work always. Once you start a project, you aim should be on writing code, rather than keep upgrading the package. The other way to put a solution is to say, "No matter what, I will work only with Django 1.9". But the question is how long ? And when you decide to upgrade, how many projects will you upgrade or and how sure are we with all the dependencies of the projects ?</p>
+<p>So none of these are viable solutions. They could work for some small time fun projects, but wont run in the longer term.</p>
+<p>Now lets say, I am exploring a lot of free projects based on python, and one project looks interesting. If I just want to explore to see if it works or not, why would I want to install the whole package in my base system? What if those packages, conflict with my base system or downgrade some of my system packages ? So what would you do ? No with python your dont need virtual machines. That is an overkill.</p>
+<p>Now talking about the base system, we all do a common mistake forgetting the common statement in free world "With Great power comes greater responsibilities". Yes, if you understand what the great power is, I am talking about "sudo".</p>
+<p>sudo pip install package_name.</p>
+<p>No, again, unless you completely understand what the package does, and what system files does this change. Never do this, It could end up breaking a lot of the system dependencies. What ?? How ? Now that is another topic, will soon write up on "When to think sudo".</p>
+<p>So what would you do ? Well, you already know the answer, but still spilling the beans, the solution is <strong>virtualenv</strong>. How is that a solution ?</p>
+<p>Virtualenv takes a different stand in solving the dependency issues of a project. So just like virtual machines, you create virtual python environments, that uses the <strong>system's python</strong> and keep all your dependencies in a virtual machine like space, that will never conflict your system packges. </p>
+<p>** Psst ! Please note and remember "System's Python". Very important.</p>
+<p>Apparently , with virtualenv , You don’t want to have to set up a whole new server with a different version of Django to use it.</p>
+<p>Assuming that has given a breif overview of what is a virtualenv and how it is useful, lets come to the actual problem.</p>
+<p>We all use version control, for commiting and keeping our code publically visible for all various reasons.</p>
+<p>So here is a task. </p>
+<p>Here are a few python projects, have a look at their root tree source code . Dont take more than 2 min's for each project. </p>
+<ol>
+<li>Django [https://github.com/django/django]</li>
+<li>Numpy [https://sourceforge.net/projects/numpy/files/]</li>
+<li>Scipy [https://sourceforge.net/projects/scipy/files/]</li>
+<li>Pelican [https://github.com/getpelican/pelican]</li>
+</ol>
+<p>So now to the question, in any of these projects that you saw, did you see the virtualenv files checked in ??</p>
+<p>Very obviously "no" right ?? Great, point proved. !</p>
+<p>Nopes, I am stopping there. I am kinda long always :-D</p>
+<p>So lets also understand why, do they not checkin, and what are the effects of checking it in ?</p>
+<ol>
+<li>
+<p>Source/Version control system</p>
+<div class="highlight"><pre>(GIT,SVN etc) are for the code you write, not for the system packages/binaries that is tied to your system.
+</pre></div>
+
+
+</li>
+<li>
+<p>The python could be wrongly referred.</p>
+<div class="highlight"><pre>What ? Do you remember &quot;system&#39;s python&quot; I mentioned before. How do you create a virtualenv ?
+
+Do you do a sudo apt/dnf install python-virtualenv
+
+and
+
+virtualenv blog
+
+Now when you do that command, it actually makes a reference to your system&#39;s python binary for its execution. It does not install a new version of python.
+
+I know, you still dont trust me, well dont. Try it for yourself. Now open your command line, and explore . .
+
+Hmmm, How ?
+
+Here you go.
+
+ - Without any virtualenv, type &quot;which python&quot;
+        You should see &quot;/usr/bin/python&quot;
+ - Now Activate a virtualenv, and type &quot;which python&quot;
+
+   Now assuming, I have create a virtualenv called test in my   /tmp directory, my output would be something like &quot;/tmp/test/bin/python&quot;.
+
+    Now if you do a ls -latr /tmp/test/bin/python , you will see that it is referring itself to the system python ? Do you ?? Now that is a good reason, why you should never checkin your virtualenv.
+
+I am still not convinced. Well read on, the next 3 points.
+</pre></div>
+
+
+</li>
+<li>
+<p>People use different versions of python.</p>
+<div class="highlight"><pre>Now, I am a young guy, but always loves to use the most stable stuff. So I dont use the latest python, I rather use a stable release. So now lets say, you create a virtualenv with a differnt version of python (python3 for example) and I still run a python2, your virtual machine&#39;s binary would still be pointing to python3 of your system, but whereas when I pull the code on a system that dosent have python3, I would have to delete all your system generated binary files of python3 and recreate all the binaries for python2 again. Which is a lot of pain. (well actually not, with virtualenv all I have to do is to copy your source code and put it in a virtualenv I create with my python)
+
+So, not checking the virtualenv also solved the different versions of python issue.
+
+Looking it from a free software prespective, I am talking about Freedom to choose the version of python I want to run. But with checking in the virtualenv binaries, you would be forcing me either to do a lot more work, or to use the same version of python as your run.
+</pre></div>
+
+
+</li>
+<li>
+<p>People use different architecture of computers.</p>
+<div class="highlight"><pre>Heard of 32 bit&#39;s (Yes, they still exist a lot) , 64 bits, ARM etc. Well, when I compile python for differnt architectures, my binaries itself could change. In simple words, if you, say pip install mysql-python, on a 64 bit machine, and then someone with a 32 bit machine tries to use it, it will not work.
+</pre></div>
+
+
+</li>
+<li>
+<p>People still use the most crappy and spying Windows, and yet they could use your code.</p>
+<div class="highlight"><pre>Now, lets say, you have checked in the code with your virtualenv, and I pull it on a windows machine. (Remember that is just for an example, and Microsoft, if you are reading this, I dont pirate you anymore, rather I dont use you atall.) If your reaction to that was &quot;Duh&quot;, I tried to make a joke, and it ended up being a PJ. So move on.
+
+Now I pull down your code on a Windows machine, remember the virtualenv python references to something called &quot;/usr/bin/python&quot; ?? It dosent even exist in Windows. Its called python2.7.exe in windows (assuming you have setup all the environment variables correctly). Now that could fail.
+</pre></div>
+
+
+</li>
+</ol>
+<p><strong>So always, remember always check in the source, not the result of running a process.</strong></p>
+<p>A virtualenv is rather platform specific; a Windows virtualenv may require different binaries than one created on Linux. The paths in the script files will almost certainly use absolute paths, not relative paths tying a virtualenv to a specific location on your harddisk.</p>
+<p>And, the best practise is only to check the source and give a requirements.txt that will install all the required binaries for the project. (If this line didnt make sense, read up about, python-pip, pip freeze and pip install -r requirements.txt )</p>
+<p>Assuming, you are satisfied with not checking in the virtualenv as a part of "source control system", the bigger question is, How did people even think of checking in the virtualenv ??</p>
+<p>Well, aparently looking the docs of the tutorial of "Django Girls", where they have mentioned to checkin the virtualenv as a part of the code. <a href="http://tutorial.djangogirls.org/en/deploy/index.html#starting-our-git-repository">Refer here for the instructions on Django Girls</a></p>
+<p>Now to those who attended, Django Girls, if any of you could file a issue/bug in their docs, and ask them to correct it, it could help of a lot of people who are using it for reference.</p>
+<p>Belive me, Django Girls tutorial, is one of the very best Django kickstarters available out there. Its totally awesome. To anybody who say, "I want to learn Django", that is the first url I always share. A great community effort, and being a community, we have to notify the people, when something is wrong.  So if some of you who attended Django Girls or mentored Django girls, would be kind enough to file a bug, and let them know, I would be a happy person.</p>
+<p>Kudos and thanks again, if you read every line of the article or just skipped all the lines in between and came to this line just for a kudos :-D</p>
+<p>Have Fun . . </p></div>
+	<hr>
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="voidspacexyz">Tweet this article</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<h2>Comments</h2>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ramaseshan';
+    var disqus_title = '!(git commit virtualenv)';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			</div>
+		</div> 		<!-- <hr> -->
+	</div> <!-- /container -->
+
+<footer class="aw-footer bg-danger">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center center-block aw-bottom">
+				<p>Powered by <a href="http://www.getpelican.com">Pelican</a> which takes great advantage of the awesome <a href="https://python.org"> Python </a> </p>
+
+				“Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/"> Creative Commons Attribution 3.0 Unported License</a>.
+				<br />
+				Copyright 2016 &copy; Voidspace.”
+					
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("div.collapseheader").click(function () {
+			$header = $(this).children("span").first();
+			$codearea = $(this).children(".input_area");
+			$codearea.slideToggle(500, function () {
+				$header.text(function () {
+					return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+				});
+			});
+		});
+	});
+	</script>
+</body>
+</html>
