@@ -66,9 +66,9 @@ So now to the question, in any of these projects that you saw, did you see the v
 Very obviously "no" right ?? Great, point proved. !
 
 
-Nopes, I am stopping there. I am kinda long always :-D
+Nopes, I am not stopping there. I am kinda long always :-D
 
-So lets also understand why, do they not checkin, and what are the effects of checking it in ?
+So lets also understand why, do they not checkin, and what are the effects of checking it in !
 
 1. Source/Version control system
 
@@ -122,7 +122,7 @@ So lets also understand why, do they not checkin, and what are the effects of ch
         Now I pull down your code on a Windows machine, remember the virtualenv python references to something called "/usr/bin/python" ?? It dosent even exist in Windows. Its called python2.7.exe in windows (assuming you have setup all the environment variables correctly). Now that could fail.
 
 
-**So always, remember always check in the source, not the result of running a process.**
+**So always, remember only to check in the source, not the result of running a process.**
 
 A virtualenv is rather platform specific; a Windows virtualenv may require different binaries than one created on Linux. The paths in the script files will almost certainly use absolute paths, not relative paths tying a virtualenv to a specific location on your harddisk.
 
