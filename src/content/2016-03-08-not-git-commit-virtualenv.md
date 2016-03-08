@@ -15,7 +15,7 @@ So, To write my first blog post of the year, I was attending the first FSMK Sund
 1. The mentors were all participants of Django Girls in Bangalore this year
 2. Their mentor was a fellow Free Software Activist at FSFTN (@srravya)
 3. FSMK was celebrating women's months with all women speakers and mentors all over the month. First time I was hearing that. 
-4. I was absolutely jobless on that day, and attending this event meant spending some useful time along with some new people. (Pun intended :-D )
+4. I was absolutely jobless on that day, and attending this event meant spending some useful time with a great set of people.
 
 So this article is not about the event, as such, but about a common mistake that people do with python. A common mistake that was also done in this hands-on.
 

@@ -4,7 +4,7 @@
 &lt;li&gt;The mentors were all participants of Django Girls in Bangalore this year&lt;/li&gt;
 &lt;li&gt;Their mentor was a fellow Free Software Activist at FSFTN (@srravya)&lt;/li&gt;
 &lt;li&gt;FSMK was celebrating women's months with all women speakers and mentors all over the month. First time I was hearing that. &lt;/li&gt;
-&lt;li&gt;I was absolutely jobless on that day, and attending this event meant spending some useful time along with some new people. (Pun intended :-D )&lt;/li&gt;
+&lt;li&gt;I was absolutely jobless on that day, and attending this event meant spending some useful time with a great set of people.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;So this article is not about the event, as such, but about a common mistake that people do with python. A common mistake that was also done in this hands-on.&lt;/p&gt;
 &lt;p&gt;Yes, that is "Checking in the virtualenv folder along with the source code of the project". This article is intended to explain , why that is a bad practice, and why you should never do such a mistake.&lt;/p&gt;
