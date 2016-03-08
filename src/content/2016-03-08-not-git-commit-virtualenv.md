@@ -38,7 +38,7 @@ Now talking about the base system, we all do a common mistake forgetting the com
 
 sudo pip install package_name.
 
-No, again, unless you completely understand what the package does, and what system files does this change. Never do this, It could end up breaking a lot of the system dependencies. What ?? How ? Now that is another topic, will soon write up on "When to think sudo".
+No, again, unless you completely understand what the package does, and what system files does this change. Never do this, It could end up breaking a lot of the system dependencies. What ?? How ? Now that is another topic, will soon write up on "When to think sudo and why sudo is not a solution to all your problems".
 
 So what would you do ? Well, you already know the answer, but still spilling the beans, the solution is **virtualenv**. How is that a solution ?
 
