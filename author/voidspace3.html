@@ -42,6 +42,46 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 <div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<a href="/technology/2015/04/02/saltstack-and-python-more-operations/">
+		<h2 itemprop="name headline">SaltStack and Python- More Operations</h2>
+	</a>
+	<time datetime="2015-04-02T00:00:00+02:00" itemprop="datePublished">Thu 02 April 2015</time>
+	&nbsp;—&nbsp;
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">Voidspace</span>
+	</span>
+	<div class="summary"><p>This post talks about doing various operations using SaltStack and Python. If you are looking for the basics, please refer here. ramaseshan.github.io/technology/2015/04/02/saltstack-and-python/</p>
+<p>A basic ls command example</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">salt.client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">salt</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">LocalClient</span><span class="p">()</span>
+<span class="n">client</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;cmd.run&#39;</span><span class="p">,[</span><span class="s">&#39;ls&#39;</span><span class="p">])</span>
+</pre></div>
+
+
+<p>and the output would ...</p></div>
+	Category:
+	<span itemprop="articleSection">
+		<a href="/category/technology.html" rel="category">Technology</a>
+	</span>
+	Tags:
+	<span itemprop="keywords">
+		<a href="/tag/technology.html" rel="tag">[technology</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="/tag/saltstack.html" rel="tag">saltstack</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="/tag/python.html" rel="tag">python</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="/tag/saltapi.html" rel="tag">saltapi</a>
+	</span>
+	<span itemprop="keywords">
+		<a href="/tag/salt-operations.html" rel="tag">salt-operations]</a>
+	</span>
+</div>
+<hr>
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<a href="/free-society/2015/03/25/document-freedom-day-talk-at-fractalio-data/">
 		<h2 itemprop="name headline">Document Freedom Day Talk at Fractalio Data</h2>
 	</a>

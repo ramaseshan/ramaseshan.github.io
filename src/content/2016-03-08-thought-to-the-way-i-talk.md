@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A few things I do adopt while I talk on stage.
+title: Ideas I adopt when I talk on stage
 modified:
 category: Talks
 description: "Learnings and ways of giving a talk, and what all I use as of now."
