@@ -32,8 +32,8 @@
 &lt;/ol&gt;
 &lt;p&gt;So now to the question, in any of these projects that you saw, did you see the virtualenv files checked in ??&lt;/p&gt;
 &lt;p&gt;Very obviously "no" right ?? Great, point proved. !&lt;/p&gt;
-&lt;p&gt;Nopes, I am stopping there. I am kinda long always :-D&lt;/p&gt;
-&lt;p&gt;So lets also understand why, do they not checkin, and what are the effects of checking it in ?&lt;/p&gt;
+&lt;p&gt;Nopes, I am not stopping there. I am kinda long always :-D&lt;/p&gt;
+&lt;p&gt;So lets also understand why, do they not checkin, and what are the effects of checking it in !&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Source/Version control system&lt;/p&gt;
@@ -101,7 +101,7 @@ Now I pull down your code on a Windows machine, remember the virtualenv python r
 
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;So always, remember always check in the source, not the result of running a process.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So always, remember only to check in the source, not the result of running a process.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A virtualenv is rather platform specific; a Windows virtualenv may require different binaries than one created on Linux. The paths in the script files will almost certainly use absolute paths, not relative paths tying a virtualenv to a specific location on your harddisk.&lt;/p&gt;
 &lt;p&gt;And, the best practise is only to check the source and give a requirements.txt that will install all the required binaries for the project. (If this line didnt make sense, read up about, python-pip, pip freeze and pip install -r requirements.txt )&lt;/p&gt;
 &lt;p&gt;Assuming, you are satisfied with not checking in the virtualenv as a part of "source control system", the bigger question is, How did people even think of checking in the virtualenv ??&lt;/p&gt;
